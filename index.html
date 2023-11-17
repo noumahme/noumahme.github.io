@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
@@ -20,14 +21,24 @@
             padding: 1em 0;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
         section {
             padding: 20px;
         }
 
-        h1,
-        h2,
-        h3 {
+        h2 {
             color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
         }
 
         .container {
@@ -35,8 +46,17 @@
             margin: 0 auto;
         }
 
-        .project {
-            margin-bottom: 20px;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            color: #007bff;
         }
 
         footer {
@@ -45,12 +65,21 @@
             background-color: #333;
             color: #fff;
         }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Your Name</h1>
+        <h1>Nouman Ahmed</h1>
         <p>Software Engineer</p>
     </header>
 
@@ -77,8 +106,7 @@
     <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Online Task Management App
-            </h3>
+            <h3>Online Task Management App</h3>
             <p>
                 Developed a web-based task management application to help users organize and prioritize their daily tasks efficiently. The app provides 
                 a user-friendly interface for creating, editing, and deleting tasks, along with features for setting due dates and marking tasks as completed.
@@ -90,6 +118,11 @@
                 The website allows users to browse products, add items to their cart, and securely complete the checkout process.</p>
         </div>
         <!-- Add more projects as needed -->
+    </section>
+
+    <section id="resume" class="container">
+        <h2>Resume</h2>
+        <p>Check out my resume: <a href="link-to-your-resume.pdf" target="_blank">Resume</a></p>
     </section>
 
     <section id="contact" class="container">
