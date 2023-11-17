@@ -7,15 +7,15 @@
     <title>Nouman Ahmed - Software Engineer</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
 
         header {
-            background-color: #333;
+            background-color: #343a40;
             color: #fff;
             text-align: center;
             padding: 1em 0;
@@ -23,22 +23,23 @@
 
         header h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 2.5em;
         }
 
         header p {
             margin: 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
 
         section {
-            padding: 20px;
+            padding: 30px 0;
         }
 
         h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            color: #343a40;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 15px;
+            font-size: 2em;
         }
 
         .container {
@@ -53,26 +54,46 @@
 
         li {
             margin-bottom: 10px;
+            font-size: 1.2em;
         }
 
         .project h3 {
             color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
             padding: 1em 0;
-            background-color: #333;
+            background-color: #343a40;
             color: #fff;
         }
 
         a {
             color: #007bff;
             text-decoration: none;
+            transition: color 0.3s ease-in-out;
         }
 
         a:hover {
+            color: #0056b3;
             text-decoration: underline;
+        }
+
+        .resume-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .resume-link:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -122,7 +143,7 @@
 
     <section id="resume" class="container">
         <h2>Resume</h2>
-        <p>Check out my resume: <a href="link-to-your-resume.pdf" target="_blank">Resume</a></p>
+        <p>Check out my resume: <a class="resume-link" href="link-to-your-resume.pdf" target="_blank">View Resume</a></p>
     </section>
 
     <section id="contact" class="container">
