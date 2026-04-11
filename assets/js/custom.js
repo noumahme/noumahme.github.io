@@ -4,15 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
     const revealItems = document.querySelectorAll(".reveal");
     const metricValues = document.querySelectorAll("[data-count]");
-    const spotlightTabs = document.querySelectorAll(".spotlight-tab");
-    const spotlightPanels = document.querySelectorAll("[data-panel-content]");
+    const heroShell = document.querySelector(".hero-shell");
+    const switchers = document.querySelectorAll("[data-switcher]");
 
     const closeMenu = () => {
+        if (!header || !menuToggle) {
+            return;
+        }
+
         header.classList.remove("menu-open");
         menuToggle.setAttribute("aria-expanded", "false");
     };
 
-    if (menuToggle) {
+    if (menuToggle && header) {
         menuToggle.addEventListener("click", () => {
             const isOpen = header.classList.toggle("menu-open");
             menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 observer.unobserve(entry.target);
             });
         },
-        { threshold: 0.18 }
+        { threshold: 0.16 }
     );
 
     revealItems.forEach((item) => revealObserver.observe(item));
@@ -55,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         },
         {
-            rootMargin: "-45% 0px -45% 0px",
+            rootMargin: "-42% 0px -46% 0px",
             threshold: 0
         }
     );
@@ -64,19 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
         sectionObserver.observe(section);
     });
 
-    spotlightTabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            const target = tab.dataset.panel;
+    switchers.forEach((switcher) => {
+        const buttons = Array.from(switcher.querySelectorAll("[data-switcher-target]"));
+        const panels = Array.from(switcher.querySelectorAll("[data-switcher-panel]"));
 
-            spotlightTabs.forEach((button) => {
-                const isActive = button === tab;
-                button.classList.toggle("is-active", isActive);
-                button.setAttribute("aria-selected", String(isActive));
-            });
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const target = button.dataset.switcherTarget;
 
-            spotlightPanels.forEach((panel) => {
-                const shouldShow = panel.dataset.panelContent === target;
-                panel.hidden = !shouldShow;
+                buttons.forEach((item) => {
+                    const isActive = item === button;
+                    item.classList.toggle("is-active", isActive);
+                    item.setAttribute("aria-selected", String(isActive));
+                });
+
+                panels.forEach((panel) => {
+                    const shouldShow = panel.dataset.switcherPanel === target;
+                    panel.classList.toggle("is-active", shouldShow);
+                    panel.hidden = !shouldShow;
+                });
             });
         });
     });
@@ -122,4 +132,20 @@ document.addEventListener("DOMContentLoaded", () => {
         metric.textContent = `0${suffix}`;
         metricObserver.observe(metric);
     });
+
+    if (heroShell && window.matchMedia("(pointer:fine)").matches) {
+        heroShell.addEventListener("pointermove", (event) => {
+            const bounds = heroShell.getBoundingClientRect();
+            const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+            const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+            heroShell.style.setProperty("--pointer-x", `${x}%`);
+            heroShell.style.setProperty("--pointer-y", `${y}%`);
+        });
+
+        heroShell.addEventListener("pointerleave", () => {
+            heroShell.style.setProperty("--pointer-x", "18%");
+            heroShell.style.setProperty("--pointer-y", "24%");
+        });
+    }
 });

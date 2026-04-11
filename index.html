@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio website for Nouman Ahmed, a Computer Science PhD researcher focused on machine learning, NLP, computer vision, reinforcement learning, and security analytics.">
-    <title>Nouman Ahmed | ML Research Portfolio</title>
+    <meta name="description" content="Portfolio website for Nouman Ahmed, a Computer Science PhD researcher building practical machine learning systems across NLP, computer vision, reinforcement learning, and security analytics.">
+    <title>Nouman Ahmed | PhD Researcher in Machine Learning</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+    <div class="page-noise"></div>
     <div class="page-glow page-glow-a"></div>
     <div class="page-glow page-glow-b"></div>
 
@@ -33,7 +34,6 @@
 
             <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
                 <a href="#about">About</a>
-                <a href="#spotlight">Spotlight</a>
                 <a href="#work">Work</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
@@ -43,45 +43,175 @@
     </header>
 
     <main>
-        <section class="hero section-pad" id="hero">
-            <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                    <p class="eyebrow">PhD Researcher | Machine Learning | University of Tulsa</p>
-                    <h1>Research-driven ML systems with a practical edge.</h1>
-                    <p class="lead">
-                        I am Nouman Ahmed, a Computer Science PhD researcher building useful machine learning systems across NLP, computer vision, reinforcement learning, and security analytics.
-                    </p>
+        <section class="hero section-pad">
+            <div class="container">
+                <div class="hero-shell reveal">
+                    <div class="hero-copy">
+                        <p class="eyebrow">PhD Researcher | University of Tulsa | Machine Learning</p>
+                        <p class="hero-pretitle">Hello, I'm</p>
+                        <h1 class="hero-name">
+                            <span class="hero-name-small">Nouman</span>
+                            <span class="hero-name-large">Ahmed</span>
+                        </h1>
+                        <p class="hero-summary">
+                            I turn research questions into practical machine learning systems across NLP, recommender systems, computer vision, reinforcement learning, and security analytics.
+                        </p>
 
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#work">View selected work</a>
-                        <a class="button button-secondary" href="assets/download/resume.pdf" download>Download resume</a>
+                        <div class="switcher switcher-hero" data-switcher>
+                            <div class="switcher-tabs" role="tablist" aria-label="Nouman Ahmed profile modes">
+                                <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="researcher">Researcher</button>
+                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="builder">Builder</button>
+                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="mentor">Mentor</button>
+                            </div>
+
+                            <div class="switcher-panels">
+                                <article class="switcher-panel is-active" data-switcher-panel="researcher">
+                                    <p class="switcher-kicker">What I am doing now</p>
+                                    <h2>I like research that survives contact with real constraints.</h2>
+                                    <p>
+                                        My strongest work lives at the point where experiments, baselines, and implementation quality all matter at the same time.
+                                    </p>
+                                </article>
+
+                                <article class="switcher-panel" data-switcher-panel="builder" hidden>
+                                    <p class="switcher-kicker">What I build</p>
+                                    <h2>I build ML systems that are clear, testable, and useful beyond the demo.</h2>
+                                    <p>
+                                        From attack-graph pipelines to LLM recommenders and robotics prototypes, I enjoy turning technical ideas into working systems with measurable outcomes.
+                                    </p>
+                                </article>
+
+                                <article class="switcher-panel" data-switcher-panel="mentor" hidden>
+                                    <p class="switcher-kicker">How I work with people</p>
+                                    <h2>I teach, explain, and create momentum for the people around me.</h2>
+                                    <p>
+                                        Teaching programming, algorithms, and databases has made me sharper at communicating complex ideas with precision and patience.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#work">Explore selected work</a>
+                            <a class="button button-secondary" href="assets/download/resume.pdf" download>Download resume</a>
+                        </div>
+
+                        <ul class="hero-meta" aria-label="Quick details">
+                            <li>Tulsa, Oklahoma</li>
+                            <li>Expected PhD completion: 2028</li>
+                            <li>noa9295@utulsa.edu</li>
+                        </ul>
                     </div>
 
-                    <ul class="hero-meta" aria-label="Quick summary">
-                        <li>Tulsa, Oklahoma</li>
-                        <li>Expected PhD completion: 2028</li>
-                        <li>Available for research and ML engineering collaborations</li>
-                    </ul>
+                    <div class="hero-visual">
+                        <div class="portrait-shell">
+                            <div class="portrait-frame">
+                                <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed">
+                            </div>
+                            <div class="portrait-badge">
+                                <span class="portrait-badge-label">Current focus</span>
+                                <strong>Transformers, recommender systems, RL, and ML systems design</strong>
+                            </div>
+                        </div>
+
+                        <div class="signal-card signal-card-a">
+                            <span class="signal-label">Recent impact</span>
+                            <strong>100+ attack graphs</strong>
+                            <p>Engineered from NVD and CVE datasets to reduce analysis time by 40%.</p>
+                        </div>
+
+                        <div class="signal-card signal-card-b">
+                            <span class="signal-label">Recent range</span>
+                            <strong>From language to robotics</strong>
+                            <p>Sentence similarity, computer vision, RL navigation, and LLM recommendation systems.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="hero-visual reveal">
-                    <div class="portrait-card">
-                        <div class="portrait-frame">
-                            <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed">
-                        </div>
-                        <div class="portrait-caption">
-                            <p class="caption-label">Current focus</p>
-                            <p>Transformers, recommender systems, reinforcement learning, and ML systems that hold up outside the lab.</p>
-                        </div>
+        <section class="about section-overlap" id="about">
+            <div class="container">
+                <div class="about-shell reveal">
+                    <div class="about-intro">
+                        <p class="eyebrow">About</p>
+                        <h2>The point of my work is not just model performance. It is usable, well-explained progress.</h2>
+                        <p>
+                            I am a Computer Science PhD researcher who enjoys difficult technical problems, but I care most when the solution becomes clear, useful, and measurable. I want visitors to understand both what I do and how I think within a few seconds.
+                        </p>
                     </div>
 
-                    <div class="floating-note note-top">
-                        <span class="floating-kicker">Security research</span>
-                        <strong>100+ attack graphs</strong>
-                    </div>
-                    <div class="floating-note note-bottom">
-                        <span class="floating-kicker">Vision + heritage</span>
-                        <strong>88% mAP on pose estimation</strong>
+                    <div class="about-grid">
+                        <div class="about-stage">
+                            <div class="switcher switcher-about" data-switcher>
+                                <div class="switcher-tabs" role="tablist" aria-label="About Nouman Ahmed">
+                                    <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="approach">How I research</button>
+                                    <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="build">How I build</button>
+                                    <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="teach">How I teach</button>
+                                </div>
+
+                                <div class="switcher-panels">
+                                    <article class="switcher-panel is-active" data-switcher-panel="approach">
+                                        <p class="switcher-kicker">Research approach</p>
+                                        <h3>I start with a baseline, then push for a result worth defending.</h3>
+                                        <p>
+                                            My work usually begins with a question that needs clearer evidence: can a sentence similarity model perform better, can pose estimation hold up on a harder visual domain, or can agents cooperate more reliably?
+                                        </p>
+                                        <ul class="detail-list">
+                                            <li>I compare against baselines instead of relying on vague claims.</li>
+                                            <li>I care about accuracy improvements and implementation quality equally.</li>
+                                            <li>I prefer experiments that lead to a system someone else can build on.</li>
+                                        </ul>
+                                    </article>
+
+                                    <article class="switcher-panel" data-switcher-panel="build" hidden>
+                                        <p class="switcher-kicker">Builder mindset</p>
+                                        <h3>I like turning research effort into prototypes that feel useful immediately.</h3>
+                                        <p>
+                                            That could mean engineering attack graphs from vulnerability datasets, building an LLM-based recommender for thousands of users, or programming a robotic dog to navigate autonomously.
+                                        </p>
+                                        <ul class="detail-list">
+                                            <li>I build around measurable outcomes instead of feature volume.</li>
+                                            <li>I enjoy systems that connect modeling decisions with user impact.</li>
+                                            <li>I aim for interfaces and outputs that are easy to interpret.</li>
+                                        </ul>
+                                    </article>
+
+                                    <article class="switcher-panel" data-switcher-panel="teach" hidden>
+                                        <p class="switcher-kicker">Teaching style</p>
+                                        <h3>I teach with the same mindset I bring to engineering: clarity first, then depth.</h3>
+                                        <p>
+                                            Supporting students across programming, algorithms, and databases has made explanation one of my strongest technical tools.
+                                        </p>
+                                        <ul class="detail-list">
+                                            <li>I simplify hard topics without flattening the important details.</li>
+                                            <li>I enjoy creating structure that helps other people move faster.</li>
+                                            <li>I treat communication as part of strong technical work, not an extra.</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-proof">
+                            <article class="proof-card">
+                                <span class="proof-value">5%</span>
+                                <p class="proof-title">better sentence similarity accuracy</p>
+                                <p>Improved over a baseline BERT model using Hugging Face Transformers.</p>
+                            </article>
+
+                            <article class="proof-card">
+                                <span class="proof-value">88%</span>
+                                <p class="proof-title">mAP on sculpture pose estimation</p>
+                                <p>Applied OpenCV and Detectron2 to 30+ ancient sculptures.</p>
+                            </article>
+
+                            <article class="proof-card">
+                                <span class="proof-value">20%</span>
+                                <p class="proof-title">faster autonomous navigation</p>
+                                <p>Programmed a robotic dog with RLlib to outperform scripted control.</p>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,102 +238,14 @@
             </div>
         </section>
 
-        <section class="about section-pad" id="about">
-            <div class="container section-grid">
-                <div class="section-copy reveal">
-                    <p class="eyebrow">About</p>
-                    <h2>From experiments to outcomes people can actually use.</h2>
-                    <p>
-                        My work is rooted in research, but I care just as much about clarity, implementation, and measurable results. I enjoy building systems that move from baseline models to tested prototypes, whether that means improving sentence similarity, designing recommenders, analyzing vulnerability data, or training embodied agents.
-                    </p>
-                    <p>
-                        Alongside research, I teach and mentor students across programming, algorithms, and database systems. That mix keeps my work practical: I build carefully, explain clearly, and stay focused on impact.
-                    </p>
-                </div>
-
-                <div class="focus-list reveal">
-                    <article class="focus-card">
-                        <p class="focus-title">Research-minded builder</p>
-                        <p>I design experiments, compare against baselines, and turn findings into systems that are easy to explain and extend.</p>
-                    </article>
-                    <article class="focus-card">
-                        <p class="focus-title">Broad ML range</p>
-                        <p>NLP, recommender systems, computer vision, reinforcement learning, and security analytics all show up in my recent work.</p>
-                    </article>
-                    <article class="focus-card">
-                        <p class="focus-title">Teaching and leadership</p>
-                        <p>I support students, run labs, prepare course material, and help research and student communities secure resources.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="spotlight section-pad" id="spotlight">
-            <div class="container">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Spotlight</p>
-                    <h2>A simple view of where I create the most value.</h2>
-                </div>
-
-                <div class="spotlight-shell reveal">
-                    <div class="spotlight-tabs" role="tablist" aria-label="Portfolio spotlight">
-                        <button class="spotlight-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-research" id="tab-research" data-panel="research">Research</button>
-                        <button class="spotlight-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-teaching" id="tab-teaching" data-panel="teaching">Teaching</button>
-                        <button class="spotlight-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-leadership" id="tab-leadership" data-panel="leadership">Leadership</button>
-                    </div>
-
-                    <div class="spotlight-panels">
-                        <article class="spotlight-panel is-active" id="panel-research" role="tabpanel" aria-labelledby="tab-research" data-panel-content="research">
-                            <p class="spotlight-kicker">Research</p>
-                            <h3>Applied ML across language, vision, security, and robotics.</h3>
-                            <p>
-                                My research portfolio blends modern ML methods with clear performance goals. I like projects where the technical depth is real and the outcome is measurable.
-                            </p>
-                            <ul class="spotlight-points">
-                                <li>Improved sentence similarity by 5% over a baseline BERT model using Hugging Face Transformers.</li>
-                                <li>Engineered 100+ attack graphs from NVD and CVE data, cutting manual analysis time by 40%.</li>
-                                <li>Reached 88% mAP on pose estimation for 30+ ancient sculptures with OpenCV and Detectron2.</li>
-                                <li>Reduced robotic dog obstacle-course completion time by 20% with RLlib-based autonomous navigation.</li>
-                            </ul>
-                        </article>
-
-                        <article class="spotlight-panel" id="panel-teaching" role="tabpanel" aria-labelledby="tab-teaching" data-panel-content="teaching" hidden>
-                            <p class="spotlight-kicker">Teaching</p>
-                            <h3>Clear instruction, strong preparation, and real student support.</h3>
-                            <p>
-                                Teaching keeps my technical work grounded. I have worked with classes ranging from small lab groups to large lecture sections, and I enjoy making complex topics easier to learn.
-                            </p>
-                            <ul class="spotlight-points">
-                                <li>Taught and assisted in four undergraduate courses with class sizes from 9 to 280 students.</li>
-                                <li>Led weekly laboratory and discussion sections for groups of 13 to 30 students.</li>
-                                <li>Prepared lab exercises, lectures, exams, and homework for programming and systems-focused courses.</li>
-                                <li>Supervised final projects and evaluated exams and weekly assignments.</li>
-                            </ul>
-                        </article>
-
-                        <article class="spotlight-panel" id="panel-leadership" role="tabpanel" aria-labelledby="tab-leadership" data-panel-content="leadership" hidden>
-                            <p class="spotlight-kicker">Leadership</p>
-                            <h3>Helping research and student communities operate with more support.</h3>
-                            <p>
-                                I enjoy creating the kind of structure that helps other people do their best work, whether that means funding, coordination, or advocacy.
-                            </p>
-                            <ul class="spotlight-points">
-                                <li>Represented the Computer Science department as a Graduate Student Association senator.</li>
-                                <li>Served on the Public Relations Committee and voted on travel awards and funding requests.</li>
-                                <li>Managed Machine Learning and AI Club funding, communication, and competition income tracking.</li>
-                                <li>Worked with the department to identify new funding opportunities for student initiatives.</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="work section-pad" id="work">
             <div class="container">
                 <div class="section-head reveal">
                     <p class="eyebrow">Selected Work</p>
-                    <h2>Projects and research highlights with clear outcomes.</h2>
+                    <h2>Research and systems work with visible outcomes.</h2>
+                    <p>
+                        These projects reflect the kind of work I want to keep doing: technically ambitious, outcome-focused, and grounded in real implementation.
+                    </p>
                 </div>
 
                 <div class="card-grid">
@@ -214,7 +256,7 @@
                         </div>
                         <h3>Vulnerability graph pipeline</h3>
                         <p>
-                            Built a workflow for engineering attack graphs from NVD and CVE vulnerability datasets so security analysis could move faster and with less manual effort.
+                            Built a workflow for engineering attack graphs from NVD and CVE datasets so security analysis could move faster and with less manual effort.
                         </p>
                         <div class="card-metric">100+ graphs | 40% less manual analysis</div>
                     </article>
@@ -226,7 +268,7 @@
                         </div>
                         <h3>LLM-based recommender system</h3>
                         <p>
-                            Designed and implemented a recommendation system for 2,000 users that improved diversity while keeping the experience useful and understandable.
+                            Designed and implemented a recommendation system for 2,000 users that improved diversity while keeping the experience useful and easier to trust.
                         </p>
                         <div class="card-metric">2,000 users | 15% more diversity</div>
                     </article>
@@ -238,7 +280,7 @@
                         </div>
                         <h3>Ancient sculpture pose estimation</h3>
                         <p>
-                            Applied OpenCV and Detectron2 methods to estimate pose across a collection of ancient sculptures and deliver strong precision on a challenging visual task.
+                            Applied OpenCV and Detectron2 methods to estimate pose across a collection of ancient sculptures and deliver strong precision on a difficult visual task.
                         </p>
                         <div class="card-metric">30+ sculptures | 88% mAP</div>
                     </article>
@@ -262,7 +304,7 @@
             <div class="container">
                 <div class="section-head reveal">
                     <p class="eyebrow">Experience</p>
-                    <h2>Recent roles across research and teaching.</h2>
+                    <h2>Recent roles across research, teaching, and applied systems work.</h2>
                 </div>
 
                 <div class="timeline">
@@ -317,7 +359,7 @@
             <div class="container">
                 <div class="section-head reveal">
                     <p class="eyebrow">Skills</p>
-                    <h2>Tools and domains I use the most.</h2>
+                    <h2>Technical range anchored by machine learning and systems thinking.</h2>
                 </div>
 
                 <div class="skills-grid">
@@ -371,7 +413,7 @@
             </div>
         </section>
 
-        <section class="education section-pad" id="education">
+        <section class="education section-pad">
             <div class="container split-grid">
                 <div class="education-stack reveal">
                     <div class="section-head section-head-left">
@@ -420,9 +462,9 @@
             <div class="container contact-shell reveal">
                 <div class="contact-copy">
                     <p class="eyebrow">Contact</p>
-                    <h2>Let's build something thoughtful and useful.</h2>
+                    <h2>Looking for someone who can research deeply and communicate clearly?</h2>
                     <p>
-                        If you are working on research, applied machine learning, or teaching-focused opportunities, I would be glad to connect.
+                        I am open to research collaborations, ML engineering conversations, and opportunities where practical machine learning and strong explanation both matter.
                     </p>
                 </div>
 
@@ -439,7 +481,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>Nouman Ahmed</p>
-            <p>PhD researcher in computer science focused on practical machine learning.</p>
+            <p>PhD researcher focused on machine learning systems that are both rigorous and useful.</p>
         </div>
     </footer>
 
