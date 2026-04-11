@@ -1,127 +1,125 @@
-$(document).ready(function(){
-	"use strict";
-    
-        /*==================================
-* Author        : "ThemeSine"
-* Template Name : Khanas HTML Template
-* Version       : 1.0
-==================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".site-header");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+    const revealItems = document.querySelectorAll(".reveal");
+    const metricValues = document.querySelectorAll("[data-count]");
+    const spotlightTabs = document.querySelectorAll(".spotlight-tab");
+    const spotlightPanels = document.querySelectorAll("[data-panel-content]");
 
+    const closeMenu = () => {
+        header.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+    };
 
-
-/*=========== TABLE OF CONTENTS ===========
-1. Scroll To Top 
-2. Smooth Scroll spy
-3. Progress-bar
-4. owl carousel
-5. welcome animation support
-======================================*/
-
-    // 1. Scroll To Top 
-		$(window).on('scroll',function () {
-			if ($(this).scrollTop() > 600) {
-				$('.return-to-top').fadeIn();
-			} else {
-				$('.return-to-top').fadeOut();
-			}
-		});
-		$('.return-to-top').on('click',function(){
-				$('html, body').animate({
-				scrollTop: 0
-			}, 1500);
-			return false;
-		});
-	
-	
-	
-	// 2. Smooth Scroll spy
-		
-		$('.header-area').sticky({
-           topSpacing:0
-        });
-		
-		//=============
-
-		$('li.smooth-menu a').bind("click", function(event) {
-			event.preventDefault();
-			var anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $(anchor.attr('href')).offset().top - 0
-			}, 1200,'easeInOutExpo');
-		});
-		
-		$('body').scrollspy({
-			target:'.navbar-collapse',
-			offset:0
-		});
-
-	// 3. Progress-bar
-	
-		var dataToggleTooTip = $('[data-toggle="tooltip"]');
-		var progressBar = $(".progress-bar");
-		if (progressBar.length) {
-			progressBar.appear(function () {
-				dataToggleTooTip.tooltip({
-					trigger: 'manual'
-				}).tooltip('show');
-				progressBar.each(function () {
-					var each_bar_width = $(this).attr('aria-valuenow');
-					$(this).width(each_bar_width + '%');
-				});
-			});
-		}
-	
-	// 4. owl carousel
-	
-		// i. client (carousel)
-		
-			$('#client').owlCarousel({
-				items:7,
-				loop:true,
-				smartSpeed: 1000,
-				autoplay:true,
-				dots:false,
-				autoplayHoverPause:true,
-				responsive:{
-						0:{
-							items:2
-						},
-						415:{
-							items:2
-						},
-						600:{
-							items:4
-
-						},
-						1199:{
-							items:4
-						},
-						1200:{
-							items:7
-						}
-					}
-				});
-				
-				
-				$('.play').on('click',function(){
-					owl.trigger('play.owl.autoplay',[1000])
-				})
-				$('.stop').on('click',function(){
-					owl.trigger('stop.owl.autoplay')
-				})
-
-
-    // 5. welcome animation support
-
-        $(window).load(function(){
-        	$(".header-text h2,.header-text p").removeClass("animated fadeInUp").css({'opacity':'0'});
-            $(".header-text a").removeClass("animated fadeInDown").css({'opacity':'0'});
+    if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = header.classList.toggle("menu-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
         });
 
-        $(window).load(function(){
-        	$(".header-text h2,.header-text p").addClass("animated fadeInUp").css({'opacity':'0'});
-            $(".header-text a").addClass("animated fadeInDown").css({'opacity':'0'});
+        navLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
         });
+    }
 
-});	
-	
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.18 }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const currentId = entry.target.getAttribute("id");
+
+                navLinks.forEach((link) => {
+                    const matches = link.getAttribute("href") === `#${currentId}`;
+                    link.classList.toggle("is-active", matches);
+                });
+            });
+        },
+        {
+            rootMargin: "-45% 0px -45% 0px",
+            threshold: 0
+        }
+    );
+
+    document.querySelectorAll("main section[id]").forEach((section) => {
+        sectionObserver.observe(section);
+    });
+
+    spotlightTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            const target = tab.dataset.panel;
+
+            spotlightTabs.forEach((button) => {
+                const isActive = button === tab;
+                button.classList.toggle("is-active", isActive);
+                button.setAttribute("aria-selected", String(isActive));
+            });
+
+            spotlightPanels.forEach((panel) => {
+                const shouldShow = panel.dataset.panelContent === target;
+                panel.hidden = !shouldShow;
+            });
+        });
+    });
+
+    const animateCount = (element) => {
+        const target = Number(element.dataset.count);
+        const suffix = element.dataset.suffix || "";
+        const duration = 1400;
+        const start = performance.now();
+
+        const update = (timestamp) => {
+            const elapsed = timestamp - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = Math.round(target * eased);
+
+            element.textContent = `${value.toLocaleString()}${suffix}`;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        };
+
+        requestAnimationFrame(update);
+    };
+
+    const metricObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                animateCount(entry.target);
+                observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.55 }
+    );
+
+    metricValues.forEach((metric) => {
+        const suffix = metric.dataset.suffix || "";
+        metric.textContent = `0${suffix}`;
+        metricObserver.observe(metric);
+    });
+});

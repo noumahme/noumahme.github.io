@@ -1,1035 +1,448 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio website for Nouman Ahmed, a Computer Science PhD researcher focused on machine learning, NLP, computer vision, reinforcement learning, and security analytics.">
+    <title>Nouman Ahmed | ML Research Portfolio</title>
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <div class="page-glow page-glow-a"></div>
+    <div class="page-glow page-glow-b"></div>
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>Nouman</title>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="#top" aria-label="Nouman Ahmed home">
+                <span class="brand-mark">NA</span>
+                <span class="brand-text">Nouman Ahmed</span>
+            </a>
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-		<!--flat icon css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#spotlight">Spotlight</a>
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+    <main>
+        <section class="hero section-pad" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">PhD Researcher | Machine Learning | University of Tulsa</p>
+                    <h1>Research-driven ML systems with a practical edge.</h1>
+                    <p class="lead">
+                        I am Nouman Ahmed, a Computer Science PhD researcher building useful machine learning systems across NLP, computer vision, reinforcement learning, and security analytics.
+                    </p>
 
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#work">View selected work</a>
+                        <a class="button button-secondary" href="assets/download/resume.pdf" download>Download resume</a>
+                    </div>
 
-    </head>
-	
-	<body>
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-		
-		<!-- top-area Start -->
-		<header class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+                    <ul class="hero-meta" aria-label="Quick summary">
+                        <li>Tulsa, Oklahoma</li>
+                        <li>Expected PhD completion: 2028</li>
+                        <li>Available for research and ML engineering collaborations</li>
+                    </ul>
+                </div>
 
-			        <div class="container">
+                <div class="hero-visual reveal">
+                    <div class="portrait-card">
+                        <div class="portrait-frame">
+                            <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed">
+                        </div>
+                        <div class="portrait-caption">
+                            <p class="caption-label">Current focus</p>
+                            <p>Transformers, recommender systems, reinforcement learning, and ML systems that hold up outside the lab.</p>
+                        </div>
+                    </div>
 
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">Portfolio</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
+                    <div class="floating-note note-top">
+                        <span class="floating-kicker">Security research</span>
+                        <strong>100+ attack graphs</strong>
+                    </div>
+                    <div class="floating-note note-bottom">
+                        <span class="floating-kicker">Vision + heritage</span>
+                        <strong>88% mAP on pose estimation</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
-			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
-			                    <!--<li class="smooth-menu"><a href="#profiles">profile</a></li>
-			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <li class="smooth-menu"><a href="#clients">clients</a></li>-->
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
+        <section class="metrics section-gap">
+            <div class="container metrics-grid">
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="100" data-suffix="+">100+</span></p>
+                    <p class="metric-label">attack graphs engineered from NVD and CVE datasets</p>
+                </article>
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="2000" data-suffix="">2,000</span></p>
+                    <p class="metric-label">users supported by an LLM-based recommender system</p>
+                </article>
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="30" data-suffix="+">30+</span></p>
+                    <p class="metric-label">ancient sculptures analyzed with computer vision</p>
+                </article>
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="4" data-suffix="">4</span></p>
+                    <p class="metric-label">undergraduate courses taught and supported</p>
+                </article>
+            </div>
+        </section>
 
-		    <div class="clearfix"></div>
+        <section class="about section-pad" id="about">
+            <div class="container section-grid">
+                <div class="section-copy reveal">
+                    <p class="eyebrow">About</p>
+                    <h2>From experiments to outcomes people can actually use.</h2>
+                    <p>
+                        My work is rooted in research, but I care just as much about clarity, implementation, and measurable results. I enjoy building systems that move from baseline models to tested prototypes, whether that means improving sentence similarity, designing recommenders, analyzing vulnerability data, or training embodied agents.
+                    </p>
+                    <p>
+                        Alongside research, I teach and mentor students across programming, algorithms, and database systems. That mix keeps my work practical: I build carefully, explain clearly, and stay focused on impact.
+                    </p>
+                </div>
 
-		</header><!-- /.top-area-->
-		<!-- top-area End -->
-	
-		<!--welcome-hero start -->
-		<section id="welcome-hero" class="welcome-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<h2>hi <span>,</span> i am <br> Nouman <br> Ahmed <span>.</span>   </h2>
-							<p>Software & Machine Learning Engineer</p>
-							<a href="assets/download/Resume.pdf" download>resume</a>
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-			</div><!-- /.container-->
+                <div class="focus-list reveal">
+                    <article class="focus-card">
+                        <p class="focus-title">Research-minded builder</p>
+                        <p>I design experiments, compare against baselines, and turn findings into systems that are easy to explain and extend.</p>
+                    </article>
+                    <article class="focus-card">
+                        <p class="focus-title">Broad ML range</p>
+                        <p>NLP, recommender systems, computer vision, reinforcement learning, and security analytics all show up in my recent work.</p>
+                    </article>
+                    <article class="focus-card">
+                        <p class="focus-title">Teaching and leadership</p>
+                        <p>I support students, run labs, prepare course material, and help research and student communities secure resources.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+        <section class="spotlight section-pad" id="spotlight">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Spotlight</p>
+                    <h2>A simple view of where I create the most value.</h2>
+                </div>
 
-		<!--about start -->
-		<section id="about" class="about">
-			<div class="section-heading text-center">
-				<h2>about me</h2>
-			</div>
-			<div class="container">
-				<div class="about-content">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="single-about-txt">
-								<h3>
-									Graduate student in Computer Science at The University of Tulsa. Algorithms: Greedy algorithms, Sorting algorithms, Dynamic progarmming, Linear programming, Graph problems, and Network flow problems. Languages: C#, Java, C++, and Python. Scripting Languages: React, Typescript, and HTML. Frameworks: .NET, Angular, Spring boot, and Django. Machine Learning: Supervised Learning and Reinforcement Learning. Projects: full-stack web apps, SVMs, Neural Networks, multi-agent systems.
-								</h3>
-								<!-- <p>
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspi unde omnis iste natus error sit voluptatem accusantium doloremque lauda ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam vo luptatem quia voluptas sit aspernatur aut odit aut fugit,
-								</p> -->
-								<div class="row">
-									<!--<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>phone</h3>
-											<p>918-206-8567</p>
-										</div>
-									</div>-->
-									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>email</h3>
-											<p>noumahme@gmail.com</p>
-										</div>
-									</div>
-									<div class="col-sm-4"></div>
-									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>website</h3>
-											<p>noumahme.github.io</p>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>github</h3>
-											<p>noumahme</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-sm-offset-1 col-sm-5">
-							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="profile_image">
-								<!--
-								<div class="about-list-icon">
-									<ul>
-										<li>
-											<a href="#">
-												<i  class="fa fa-facebook" aria-hidden="true"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-dribbble" aria-hidden="true"></i>
-											</a>
-											
-										</li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-twitter" aria-hidden="true"></i>
-											</a>
-											
-										</li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-linkedin" aria-hidden="true"></i>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i  class="fa fa-instagram" aria-hidden="true"></i>
-											</a>
-										</li>
-										
-										
-									</ul>
-								</div>-->
+                <div class="spotlight-shell reveal">
+                    <div class="spotlight-tabs" role="tablist" aria-label="Portfolio spotlight">
+                        <button class="spotlight-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-research" id="tab-research" data-panel="research">Research</button>
+                        <button class="spotlight-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-teaching" id="tab-teaching" data-panel="teaching">Teaching</button>
+                        <button class="spotlight-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-leadership" id="tab-leadership" data-panel="leadership">Leadership</button>
+                    </div>
 
-							</div>
+                    <div class="spotlight-panels">
+                        <article class="spotlight-panel is-active" id="panel-research" role="tabpanel" aria-labelledby="tab-research" data-panel-content="research">
+                            <p class="spotlight-kicker">Research</p>
+                            <h3>Applied ML across language, vision, security, and robotics.</h3>
+                            <p>
+                                My research portfolio blends modern ML methods with clear performance goals. I like projects where the technical depth is real and the outcome is measurable.
+                            </p>
+                            <ul class="spotlight-points">
+                                <li>Improved sentence similarity by 5% over a baseline BERT model using Hugging Face Transformers.</li>
+                                <li>Engineered 100+ attack graphs from NVD and CVE data, cutting manual analysis time by 40%.</li>
+                                <li>Reached 88% mAP on pose estimation for 30+ ancient sculptures with OpenCV and Detectron2.</li>
+                                <li>Reduced robotic dog obstacle-course completion time by 20% with RLlib-based autonomous navigation.</li>
+                            </ul>
+                        </article>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/.about-->
-		<!--about end -->
-		
-		<!--education start -->
-		<section id="education" class="education">
-			<div class="section-heading text-center">
-				<h2>education</h2>
-			</div>
-			<div class="container">
-				<div class="education-horizontal-timeline">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2023 - 2025</h2>
-									<h3>master <span>of </span> computer science</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											university of Tulsa
-										</h4>
-										<h5>Tulsa, USA</h5>
-										<p class="description">
-											Designed and Engineered an efficient multi-agent system (Reinforcement Learning). Worked in designing and analyzing efficient algorithms, computer architecture, supervised learning, database management systems, and statistical learning during my master's. Concurrently served as a graduate teaching assistant for Java development and data science courses.
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2017 - 2021</h2>
-									<h3>bachelor <span>of </span> electrical engineering</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											university of Engineering and technology
-										</h4>
-										<h5>lahore, Paksitan</h5>
-										<p class="description">
-											Mastered Python, C, and assembly language, along with proficiency in data structures. Executed an award-winning final project showcasing expertise in databases, IoT, cloud computing, and data visualization.  
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<!--
-						<div class="col-sm-4">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2004 - 2008</h2>
-									<h3>bachelor <span>of </span> creative design</h3>
-								</div><!--/.experience-time-->
-								<!--
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											university of bolton
-										</h4>
-										<h5>bolton, united kingdome</h5>
-										<p class="description">
-											Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
-										</p>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-								<!--
-							</div>
-						</div>-->
-					</div>
-				</div>
-			</div>
+                        <article class="spotlight-panel" id="panel-teaching" role="tabpanel" aria-labelledby="tab-teaching" data-panel-content="teaching" hidden>
+                            <p class="spotlight-kicker">Teaching</p>
+                            <h3>Clear instruction, strong preparation, and real student support.</h3>
+                            <p>
+                                Teaching keeps my technical work grounded. I have worked with classes ranging from small lab groups to large lecture sections, and I enjoy making complex topics easier to learn.
+                            </p>
+                            <ul class="spotlight-points">
+                                <li>Taught and assisted in four undergraduate courses with class sizes from 9 to 280 students.</li>
+                                <li>Led weekly laboratory and discussion sections for groups of 13 to 30 students.</li>
+                                <li>Prepared lab exercises, lectures, exams, and homework for programming and systems-focused courses.</li>
+                                <li>Supervised final projects and evaluated exams and weekly assignments.</li>
+                            </ul>
+                        </article>
 
-		</section><!--/.education-->
-		<!--education end -->
+                        <article class="spotlight-panel" id="panel-leadership" role="tabpanel" aria-labelledby="tab-leadership" data-panel-content="leadership" hidden>
+                            <p class="spotlight-kicker">Leadership</p>
+                            <h3>Helping research and student communities operate with more support.</h3>
+                            <p>
+                                I enjoy creating the kind of structure that helps other people do their best work, whether that means funding, coordination, or advocacy.
+                            </p>
+                            <ul class="spotlight-points">
+                                <li>Represented the Computer Science department as a Graduate Student Association senator.</li>
+                                <li>Served on the Public Relations Committee and voted on travel awards and funding requests.</li>
+                                <li>Managed Machine Learning and AI Club funding, communication, and competition income tracking.</li>
+                                <li>Worked with the department to identify new funding opportunities for student initiatives.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<!--skills start -->
-		<section id="skills" class="skills">
-				<div class="skill-content">
-					<div class="section-heading text-center">
-						<h2>skills</h2>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">
-											ASP.NET</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-													  
-												</div>
-											</div>
-											<h3>90%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">
-											Spring boot</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">
-											Angular</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-											<h3>97%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Multi-agent Systems</span>
-											<!-- <div class="single-progress-txt">
-												<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-														
-												</div>
-												</div>
-												<h3>90%</h3>	
-											</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Algorithms</span>
-									</div>
-									
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper"><span class="progressText">Genetic Programming</span></div>
-									<div class="barWrapper">
-										<span class="progressText">Version Control Tools (Git)</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-													
-												</div>
-											</div>
-											<h3>90%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">
-											Server SQL</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">React</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
-												   
-											   </div>
-											</div>
-											<h3>97%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">communication & Presentation skills</span>
-										<!-- <div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-												    
-											   </div>
-											</div>
-											<h3>90%</h3>	
-										</div> -->
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-						</div><!-- /.row -->
-					</div>	<!-- /.container -->		
-				</div><!-- /.skill-content-->
+        <section class="work section-pad" id="work">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>Projects and research highlights with clear outcomes.</h2>
+                </div>
 
-		</section><!--/.skills-->
-		<!--skills end -->
+                <div class="card-grid">
+                    <article class="work-card reveal">
+                        <div class="card-topline">
+                            <span>Security Analytics</span>
+                            <span>Research</span>
+                        </div>
+                        <h3>Vulnerability graph pipeline</h3>
+                        <p>
+                            Built a workflow for engineering attack graphs from NVD and CVE vulnerability datasets so security analysis could move faster and with less manual effort.
+                        </p>
+                        <div class="card-metric">100+ graphs | 40% less manual analysis</div>
+                    </article>
 
-		<!--experience start -->
-		<section id="experience" class="experience">
-			<div class="section-heading text-center">
-				<h2>experience</h2>
-			</div>
-			<div class="container">
-				<div class="experience-content">
-						<div class="main-timeline">
-							<ul>
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>May, 2024 - August, 2024</h2>
-													<h3>Software Engineer
-													</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Arcosa, Inc.
-														</h4>
-														<h5>Tulsa, OK</h5>
-														<p class="description">
-														<ul>
-															<li>
-															Created and maintained ASP.NET Core APIs.
-															</li>
-															<li>
-															Developed Angular UI applications to enhance the user experience of software tools.	
-															</li>
-															<li>
-															Assisted with software testing and bug fixing.
-															</li>
-														</ul>	
-	
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
-								
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>August, 2023 - Present</h2>
-													<h3>Graduate Teaching Assistant
-													</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															University of Tulsa
-														</h4>
-														<h5>OK, USA</h5>
-														<p class="description">
-															Facilitating coding proficiency in Java and Python, ensuring seamless departmental operations, including attendance, assignment grading, and resolution of student challenges. Managing lab work for over 70 students, enhancing the academic experience across the board.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+                    <article class="work-card reveal">
+                        <div class="card-topline">
+                            <span>LLMs</span>
+                            <span>Recommendation</span>
+                        </div>
+                        <h3>LLM-based recommender system</h3>
+                        <p>
+                            Designed and implemented a recommendation system for 2,000 users that improved diversity while keeping the experience useful and understandable.
+                        </p>
+                        <div class="card-metric">2,000 users | 15% more diversity</div>
+                    </article>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-offset-1 col-md-5 experience-time-responsive">
-												<div class="experience-time">
-													<h2>
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2022 - 2023
-													</h2>
-													<h3>associate software engineer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-5">
-												<div class="timeline">
-													<div class="timeline-content text-right">
-														<h4 class="title">
-															Techimpulers
-														</h4>
-														<h5>Remote<h5>
-														<p class="description">
-															Elevating task efficiency with the Online Task Management App (React.js, Node.js, MongoDB), productivity has surged by 25%. This user-friendly application redefines task processes seamlessly. In the e-commerce landscape, the HTML/CSS, Django, PostgreSQL website ensures a 15% faster checkout, complemented by a 20% boost in user engagement through personalized product recommendations. These developments underscore the impactful strides made in enhancing productivity and user experience.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5 experience-time-main">
-												<div class="experience-time">
-													<h2>
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														March, 2022 - June, 2023
-													</h2>
-													<h3>associate software engineer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+                    <article class="work-card reveal">
+                        <div class="card-topline">
+                            <span>Computer Vision</span>
+                            <span>Cultural Heritage</span>
+                        </div>
+                        <h3>Ancient sculpture pose estimation</h3>
+                        <p>
+                            Applied OpenCV and Detectron2 methods to estimate pose across a collection of ancient sculptures and deliver strong precision on a challenging visual task.
+                        </p>
+                        <div class="card-metric">30+ sculptures | 88% mAP</div>
+                    </article>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>October, 2022 - June, 2023</h2>
-													<h3>Junior DevOps Engineer</h3>
-												</div><!--/.experience-time-->
-											</div><!--/.col-->
-											<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Fiverr
-														</h4>
-														<h5>Remote</h5>
-														<p class="description">
-															Delivered comprehensive design and roadmap presentations on DevOps practices, utilizing GitLab, for two medium-sized organizations. Skillfully orchestrated the cloud infrastructure supporting the services of an online food ordering platform. Additionally, automated Linux administration processes through Python, ensuring streamlined and efficient operations across diverse technical landscapes.
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+                    <article class="work-card reveal">
+                        <div class="card-topline">
+                            <span>Reinforcement Learning</span>
+                            <span>Robotics</span>
+                        </div>
+                        <h3>Autonomous dog navigation</h3>
+                        <p>
+                            Programmed a robotic dog with RLlib to navigate a 100 sq. ft. obstacle course autonomously and outperform scripted control.
+                        </p>
+                        <div class="card-metric">20% faster completion time</div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-								<li><!--
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-offset-1 col-md-5 experience-time-responsive">
-												<div class="experience-time">
-													<h2>
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2012 - 2013
-													</h2>
-													<h3>UI/UX designer</h3>
-												</div><!--/.experience-time-->
-											<!--</div><!--/.col-->
-											<!--<div class="col-md-5">
-												<div class="timeline">
-													<div class="timeline-content text-right">
-														<h4 class="title">
-															hoplony tech limited
-														</h4>
-														<h5>newyork, USA</h5>
-														<p class="description">
-															Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
-														</p>
-													</div><!--/.timeline-content-->
-												<!--</div><!--/.timeline-->
-											<!--</div><!--/.col-->
-											<!--<div class="col-md-offset-1 col-md-5 experience-time-main">
-												<div class="experience-time">
-													<h2>
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														2012 - 2013
-													</h2>
-													<h3>UI/UX designer</h3>
-												</div><!--/.experience-time-->
-											<!--</div><!--/.col-->
-										<!--</div>
-									</div><!--/.single-timeline-box-->
-								<!--</li>
+        <section class="experience section-pad" id="experience">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Recent roles across research and teaching.</h2>
+                </div>
 
-								<li>
-									<div class="single-timeline-box fix">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="experience-time text-right">
-													<h2>2010 - 2012</h2>
-													<h3>frontend developer</h3>
-												</div><!--/.experience-time-->
-											<!--</div><!--/.col-->
-											<!--<div class="col-md-offset-1 col-md-5">
-												<div class="timeline">
-													<div class="timeline-content">
-														<h4 class="title">
-															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															hoplony tech limited
-														</h4>
-														<h5>newyork, USA</h5>
-														<p class="description">
-															Duis aute irure dolor in reprehenderit in vol patate velit esse cillum dolore eu fugiat nulla pari. Excepteur sint occana inna tecat cupidatat non proident. 
-														</p>
-													</div><!--/.timeline-content-->
-												</div><!--/.timeline-->
-											</div><!--/.col-->
-										</div>
-									</div><!--/.single-timeline-box-->
-								</li>
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <p class="timeline-date">July 2025 - Present</p>
+                        <div class="timeline-card">
+                            <h3>PhD Researcher</h3>
+                            <p class="timeline-place">University of Tulsa</p>
+                            <p>
+                                Investigating sentence similarity with transformers, generating attack graphs from vulnerability datasets, exploring pose estimation for ancient sculptures, and building reinforcement learning systems for autonomous navigation.
+                            </p>
+                        </div>
+                    </article>
 
-							</ul>
-						</div><!--.main-timeline-->
-					</div><!--.experience-content-->
-			</div>
+                    <article class="timeline-item reveal">
+                        <p class="timeline-date">Sep. 2024 - May 2025</p>
+                        <div class="timeline-card">
+                            <h3>Master's Researcher</h3>
+                            <p class="timeline-place">University of Tulsa</p>
+                            <p>
+                                Designed an LLM-based recommender system for 2,000 users and modeled cooperation in multi-agent systems through reinforcement learning.
+                            </p>
+                        </div>
+                    </article>
 
-		</section><!--/.experience-->
-		<!--experience end -->
+                    <article class="timeline-item reveal">
+                        <p class="timeline-date">Sep. 2023 - Present</p>
+                        <div class="timeline-card">
+                            <h3>Teaching Fellow</h3>
+                            <p class="timeline-place">University of Tulsa</p>
+                            <p>
+                                Taught and supported undergraduate courses in programming, algorithms, and database systems while preparing labs, lectures, homework, and exams.
+                            </p>
+                        </div>
+                    </article>
 
-		<!--profiles start 
-		<section id="profiles" class="profiles">
-			<div class="profiles-details">
-				<div class="section-heading text-center">
-					<h2>profiles</h2>
-				</div>
-				<div class="container">
-					<div class="profiles-content">
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-themeforest"></i></a>
-										<div class="profile-icon-name">themeforest</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-themeforest"></i></a>
-											<div class="profile-icon-name">themeforest</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-dribbble"></i></a>
-										<div class="profile-icon-name">dribbble</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-dribbble"></i></a>
-											<div class="profile-icon-name">dribbble</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-behance-logo"></i></a>
-										<div class="profile-icon-name">behance</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-behance-logo"></i></a>
-											<div class="profile-icon-name">behance</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-github-logo"></i></a>
-										<div class="profile-icon-name">github</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-github-logo"></i></a>
-											<div class="profile-icon-name">github</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="profile-border"></div>
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-flickr-website-logo-silhouette"></i></a>
-										<div class="profile-icon-name">flickR</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-flickr-website-logo-silhouette"></i></a>
-											<div class="profile-icon-name">flickR</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-smug"></i></a>
-										<div class="profile-icon-name">smungMung</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-smug"></i></a>
-											<div class="profile-icon-name">smungMung</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-squarespace-logo"></i></a>
-										<div class="profile-icon-name">squareSpace</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-squarespace-logo"></i></a>
-											<div class="profile-icon-name">squareSpace</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-										<div class="profile-icon-name">bitBucket</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href=""><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-											<div class="profile-icon-name">bitBucket</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		-->
-		</section><!--/.profiles-->
-		<!--profiles end -->
+                    <article class="timeline-item reveal">
+                        <p class="timeline-date">June - Aug. 2021</p>
+                        <div class="timeline-card">
+                            <h3>Undergraduate Researcher</h3>
+                            <p class="timeline-place">University of Engineering and Technology, Lahore</p>
+                            <p>
+                                Built a real-time fault detection and monitoring prototype for power systems with less than one second reporting latency and 95% fault identification accuracy.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-		<!--portfolio start 
-		<section id="portfolio" class="portfolio">
-			<div class="portfolio-details">
-				<div class="section-heading text-center">
-					<h2>portfolio</h2>
-				</div>
-				<div class="container">
-					<div class="portfolio-content">
-						<div class="isotope">
-							<div class="row">
+        <section class="skills section-pad" id="skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Skills</p>
+                    <h2>Tools and domains I use the most.</h2>
+                </div>
 
-								<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p1.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									<!--</div><!-- /.item -->
-									<!--<div class="item">
-										<img src="assets/images/portfolio/p2.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												ui/ux design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									<!--</div><!-- /.item -->
-								<!--</div><!-- /.col -->
+                <div class="skills-grid">
+                    <article class="skill-group reveal">
+                        <h3>Languages</h3>
+                        <ul class="chip-list">
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </article>
 
-								<!--<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web design
-											</a>
-										</div><!-- /.isotope-overlay -->
-									<!--</div><!-- /.item -->
-								<!--</div><!-- /.col -->
+                    <article class="skill-group reveal">
+                        <h3>ML Frameworks</h3>
+                        <ul class="chip-list">
+                            <li>PyTorch</li>
+                            <li>TensorFlow</li>
+                            <li>JAX</li>
+                            <li>scikit-learn</li>
+                            <li>Hugging Face</li>
+                        </ul>
+                    </article>
 
-								<!--<div class="col-sm-4">
-									<div class="item">
-										<img src="assets/images/portfolio/p4.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div><!-- /.isotope-overlay -->
-									<!--</div><!-- /.item -->
-									<!--<div class="item">
-										<img src="assets/images/portfolio/p5.jpg" alt="portfolio image"/>
-										<div class="isotope-overlay">
-											<a href="#">
-												web development
-											</a>
-										</div><!-- /.isotope-overlay -->
-									</div><!-- /.item -->
-								</div><!-- /.col -->
-							</div><!-- /.row -->
-						</div><!--/.isotope-->
-					</div><!--/.gallery-content-->
-				</div><!--/.container-->
-			</div><!--/.portfolio-details-->
+                    <article class="skill-group reveal">
+                        <h3>Domains</h3>
+                        <ul class="chip-list">
+                            <li>Transformers</li>
+                            <li>LangChain</li>
+                            <li>OpenCV</li>
+                            <li>Detectron2</li>
+                            <li>Gymnasium</li>
+                            <li>RLlib</li>
+                        </ul>
+                    </article>
 
-		</section><!--/.portfolio-->
-		<!--portfolio end -->
+                    <article class="skill-group reveal">
+                        <h3>MLOps and Delivery</h3>
+                        <ul class="chip-list">
+                            <li>MLflow</li>
+                            <li>Weights and Biases</li>
+                            <li>DVC</li>
+                            <li>Docker</li>
+                            <li>AWS SageMaker</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-		<!--clients start 
-		<section id="clients" class="clients">
-			<div class="section-heading text-center">
-				<h2>clients</h2>
-			</div>
-			<div class="clients-area">
-				<div class="container">
-					<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c6.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<!--<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c7.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.container-->
-			</div><!--/.clients-area-->
+        <section class="education section-pad" id="education">
+            <div class="container split-grid">
+                <div class="education-stack reveal">
+                    <div class="section-head section-head-left">
+                        <p class="eyebrow">Education</p>
+                        <h2>Academic foundation.</h2>
+                    </div>
 
-		</section><!--/.clients-->
+                    <article class="info-card">
+                        <p class="info-date">Expected 2028</p>
+                        <h3>PhD in Computer Science</h3>
+                        <p class="info-place">University of Tulsa, Tulsa, OK</p>
+                    </article>
 
-		</section><!--/.clients-->
-		<!--clients end -->
+                    <article class="info-card">
+                        <p class="info-date">June 2021</p>
+                        <h3>BS in Electrical Engineering</h3>
+                        <p class="info-place">University of Engineering and Technology, Lahore</p>
+                        <p>Best Final Year Project | PEEF Scholarship</p>
+                    </article>
+                </div>
 
-		<!--contact start -->
-		<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2>contact me</h2>
-			</div>
-			<div class="container">
-				<div class="contact-content">
-					<div class="row">
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form>
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
-												</div><!--/.form-group-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
-												</div><!--/.single-single-contact-btn-->
-											</div><!--/.col-->
-										</div><!--/.row-->
-									</form><!--/form-->
-								</div><!--/.contact-form-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-adress">
-									<div class="contact-add-head">
-										<h3>Nouman Ahmed</h3>
-										<p>Software & Machine Learning Engineer</p>
-									</div>
-									<div class="contact-add-info">
-										<!-- <div class="single-contact-add-info">
-											<h3>phone</h3>
-											<p>918-206-8567</p>
-										</div> -->
-										<div class="single-contact-add-info">
-											<h3>email</h3>
-											<p>noumahme@gmail.com</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>website</h3>
-											<p>noumahme.github.io</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>github</h3>
-											<p>noumahme</p>
-										</div>
-									</div>
-								</div><!--/.contact-adress-->
-								<!-- <div class="hm-foot-icon">
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-									</ul>
-								</div> -->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-				</div><!--/.contact-content-->
-			</div><!--/.container-->
+                <div class="education-stack reveal">
+                    <div class="section-head section-head-left">
+                        <p class="eyebrow">Leadership</p>
+                        <h2>Community roles that support other people.</h2>
+                    </div>
 
-		</section><!--/.contact-->
-		<!--contact end -->
+                    <article class="info-card">
+                        <p class="info-date">2025</p>
+                        <h3>Graduate Student Association Senator</h3>
+                        <p class="info-place">University of Tulsa</p>
+                        <p>Represented the Computer Science department and served on the Public Relations Committee.</p>
+                    </article>
 
-		<!--footer-copyright start-->
-		<footer id="footer-copyright" class="footer-copyright">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<p>
-						&copy; copyright Nouman Ahmed</a>
-					</p><!--/p-->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
+                    <article class="info-card">
+                        <p class="info-date">2025</p>
+                        <h3>Treasurer, Machine Learning and AI Club</h3>
+                        <p class="info-place">University of Tulsa</p>
+                        <p>Managed funding, tracked competition income, and worked with the department to identify new support opportunities.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" ></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-copyright-->
-		<!--footer-copyright end-->
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+        <section class="contact section-pad" id="contact">
+            <div class="container contact-shell reveal">
+                <div class="contact-copy">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's build something thoughtful and useful.</h2>
+                    <p>
+                        If you are working on research, applied machine learning, or teaching-focused opportunities, I would be glad to connect.
+                    </p>
+                </div>
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-		
-		<!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-		
-		<!-- for progress bar start-->
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:noa9295@utulsa.edu">Email me</a>
+                    <a class="button button-secondary" href="https://github.com/noumahme" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="button button-secondary" href="https://www.linkedin.com/in/noumahme/" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a class="button button-secondary" href="assets/download/resume.pdf" download>Resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-		<!-- progressbar js -->
-		<script src="assets/js/progressbar.js"></script>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Nouman Ahmed</p>
+            <p>PhD researcher in computer science focused on practical machine learning.</p>
+        </div>
+    </footer>
 
-		<!-- appear js -->
-		<script src="assets/js/jquery.appear.js"></script>
-
-		<!-- for progress bar end -->
-
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
-        
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
+    <script src="assets/js/custom.js"></script>
+</body>
 </html>
