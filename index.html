@@ -4,24 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Nouman Ahmed — PhD researcher and software engineer specializing in full-stack development, scalable systems, and AI-powered features.">
-    <title>Nouman Ahmed | Software Engineer & PhD Researcher</title>
+    <meta name="description" content="Nouman Ahmed is a software engineer and PhD researcher building full-stack products, scalable backend systems, and practical AI applications.">
+    <title>Nouman Ahmed | Software Engineer and PhD Researcher</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body class="page-home">
-    <!-- Ambient background -->
-    <div class="bg-orbs" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
     <div class="page-noise" aria-hidden="true"></div>
+    <div class="page-glow page-glow-a" aria-hidden="true"></div>
+    <div class="page-glow page-glow-b" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="top">
@@ -39,7 +35,7 @@
 
             <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
                 <a href="#about">About</a>
-                <a href="#work">Work</a>
+                <a href="#work">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
@@ -48,244 +44,218 @@
     </header>
 
     <main>
-
-        <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-        <section class="hero" id="hero">
+        <section class="hero section-pad">
             <div class="container">
-                <div class="hero-inner hero-shell reveal">
-                    <div class="hero-badge">
-                        <span class="badge-pulse"></span>
-                        Available for opportunities
+                <div class="hero-shell reveal">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Software Engineer and PhD Researcher</p>
+                        <p class="hero-pretitle">Tulsa, Oklahoma</p>
+                        <h1>Building reliable products, thoughtful systems, and practical AI experiences.</h1>
+                        <p class="hero-summary">
+                            I work across frontend, backend, cloud delivery, and applied machine learning to ship software that performs well, stays maintainable, and solves an actual user problem.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#work">View selected work</a>
+                            <a class="button button-secondary" href="assets/download/resume.pdf" download>Download resume</a>
+                        </div>
+
+                        <ul class="hero-meta" aria-label="Quick details">
+                            <li>React, Angular, Spring Boot, .NET, Python</li>
+                            <li>Machine learning and LLM applications</li>
+                            <li>Production-minded full-stack delivery</li>
+                            <li>Open to software and ML roles</li>
+                        </ul>
                     </div>
 
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-name">Nouman Ahmed</h1>
-
-                    <p class="hero-tagline">
-                        I build <span class="typed-text" id="typed-target"></span><span class="typed-cursor" aria-hidden="true"></span>
-                    </p>
-
-                    <p class="hero-desc">
-                        PhD researcher and software engineer specializing in full-stack development, scalable backend systems, and AI-powered features. Based in Tulsa, Oklahoma.
-                    </p>
-
-                    <div class="hero-switcher">
-                        <div class="switcher switcher-hero" data-switcher>
-                            <div class="switcher-tabs" role="tablist" aria-label="Profile modes">
-                                <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="engineer">Engineer</button>
-                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="builder">Builder</button>
-                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="mentor">Mentor</button>
+                    <div class="hero-stage">
+                        <div class="portrait-shell">
+                            <div class="portrait-frame">
+                                <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed" loading="eager" decoding="async">
                             </div>
-
-                            <div class="switcher-panels">
-                                <article class="switcher-panel is-active" data-switcher-panel="engineer">
-                                    <p class="switcher-kicker">How I work</p>
-                                    <h2>Software that holds up under real traffic, real deadlines, and real users.</h2>
-                                </article>
-
-                                <article class="switcher-panel" data-switcher-panel="builder" hidden>
-                                    <p class="switcher-kicker">What I build</p>
-                                    <h2>Practical web applications, internal tools, and AI features that improve how people work.</h2>
-                                </article>
-
-                                <article class="switcher-panel" data-switcher-panel="mentor" hidden>
-                                    <p class="switcher-kicker">How I contribute</p>
-                                    <h2>Clarity in code and in teams — mentoring and teaching are part of how I engineer.</h2>
-                                </article>
+                            <div class="portrait-badge">
+                                <span class="portrait-badge-label">Current toolkit</span>
+                                <strong>React, Angular, Spring Boot, .NET, Docker, Kubernetes, and OpenAI API</strong>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#work">Explore selected work</a>
-                        <a class="button button-secondary" href="assets/download/resume.pdf" download>Download resume</a>
-                    </div>
+                        <article class="signal-card signal-card-a">
+                            <span class="signal-label">Recent impact</span>
+                            <strong>40% higher engagement on a production platform</strong>
+                            <p>Improved performance and customer flow on a high-traffic e-commerce system.</p>
+                        </article>
 
-                    <div class="hero-stats-row">
-                        <div class="hero-stat">
-                            <span class="hero-stat-num">40%</span>
-                            <span class="hero-stat-label">Engagement lift</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-num">3+</span>
-                            <span class="hero-stat-label">Years experience</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-num">50%</span>
-                            <span class="hero-stat-label">Latency reduction</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-num">4</span>
-                            <span class="hero-stat-label">Featured projects</span>
-                        </div>
+                        <article class="signal-card signal-card-b">
+                            <span class="signal-label">Current focus</span>
+                            <strong>Research-backed engineering</strong>
+                            <p>Building software that connects product usability, delivery quality, and AI features without turning into a demo.</p>
+                        </article>
                     </div>
                 </div>
             </div>
-            <div class="scroll-hint" aria-hidden="true">scroll</div>
         </section>
 
-        <!-- ═══════════════════════════════ FOCUS STRIP ═══════════════════════════════ -->
-        <section class="focus-strip section-gap" aria-labelledby="focus-title">
+        <section class="focus-strip section-gap" aria-labelledby="principles-title">
             <div class="container">
-                <div class="focus-strip-head reveal">
-                    <p class="eyebrow">What shapes my work</p>
-                    <h2 id="focus-title">Product value, technical range, and delivery discipline — visible in every outcome.</h2>
+                <div class="section-head reveal">
+                    <p class="eyebrow">Working Principles</p>
+                    <h2 id="principles-title">I aim for software that is clear to use, dependable under pressure, and worth maintaining.</h2>
+                    <p>
+                        The strongest work usually happens where interface quality, backend discipline, and delivery speed are all treated as part of the same product problem.
+                    </p>
                 </div>
 
                 <div class="focus-strip-grid">
                     <article class="focus-card reveal">
                         <span class="focus-index">01</span>
-                        <h3>Product engineering with measurable movement</h3>
-                        <p>I like shipping systems where performance gains, user adoption, and release quality are visible in the outcome, not just the implementation.</p>
+                        <h3>Product work with visible outcomes</h3>
+                        <p>I care about systems where performance gains, adoption, and user trust are obvious in the result rather than hidden inside the implementation.</p>
                     </article>
 
                     <article class="focus-card reveal">
                         <span class="focus-index">02</span>
-                        <h3>Applied AI that fits a real product surface</h3>
-                        <p>Research and model knowledge matter most when they improve an actual workflow, recommendation flow, or decision that users already care about.</p>
+                        <h3>Applied AI that fits the product surface</h3>
+                        <p>Research and model knowledge matter most when they improve a real workflow, recommendation path, or decision users already care about.</p>
                     </article>
 
                     <article class="focus-card reveal">
                         <span class="focus-index">03</span>
-                        <h3>Clear collaboration across code, teams, and teaching</h3>
-                        <p>Mentoring, stakeholder communication, and documentation are part of the engineering job when the goal is reliable delivery rather than isolated code output.</p>
+                        <h3>Collaboration as part of engineering</h3>
+                        <p>Mentoring, stakeholder communication, and clear handoff are part of how dependable software gets built, not extra work around the edges.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
         <section class="about section-pad" id="about">
             <div class="container">
-                <div class="section-label">01 / About</div>
+                <div class="about-shell reveal">
+                    <div class="about-grid">
+                        <div class="about-copy">
+                            <p class="eyebrow">About</p>
+                            <h2>I enjoy the space where product needs, system design, experimentation, and delivery quality meet.</h2>
+                            <p>
+                                With current PhD research and hands-on software experience, I build products that balance usability, scalability, and technical clarity. I want visitors to understand both what I build and how I think about building it.
+                            </p>
 
-                <div class="about-top">
-                    <div class="about-image-col reveal-left">
-                        <div class="about-image-wrap">
-                            <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed" loading="lazy" decoding="async">
-                        </div>
-                    </div>
+                            <div class="switcher switcher-about" data-switcher>
+                                <div class="switcher-tabs" role="tablist" aria-label="How Nouman Ahmed works">
+                                    <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="approach">Architecture</button>
+                                    <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="delivery">Delivery</button>
+                                    <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="collaboration">Collaboration</button>
+                                </div>
 
-                    <div class="about-content-col reveal-right">
-                        <p class="eyebrow">PhD Researcher · Software Engineer</p>
-                        <h2 class="section-title">Building software that <span class="grad-text">scales, ships, and sticks</span>.</h2>
-                        <p class="section-desc">
-                            With active PhD research and hands-on industry experience, I work at the intersection of product needs, system design, and implementation quality. I focus on software that is easy to use, easy to maintain, and strong enough to grow.
-                        </p>
+                                <div class="switcher-panels">
+                                    <article class="switcher-panel is-active" data-switcher-panel="approach">
+                                        <p class="switcher-kicker">Architecture mindset</p>
+                                        <h3>I prefer the simplest structure that can still scale cleanly.</h3>
+                                        <ul class="detail-list">
+                                            <li>I think about service boundaries, reliability, and maintainability from the start.</li>
+                                            <li>I care about response times, release speed, and clean developer handoff.</li>
+                                            <li>I like systems where application code and deployment choices support each other well.</li>
+                                        </ul>
+                                    </article>
 
-                        <div class="switcher switcher-about" data-switcher>
-                            <div class="switcher-tabs" role="tablist" aria-label="About Nouman Ahmed">
-                                <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="approach">Architecture</button>
-                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="build">Delivery</button>
-                                <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="teach">Mentoring</button>
-                            </div>
+                                    <article class="switcher-panel" data-switcher-panel="delivery" hidden>
+                                        <p class="switcher-kicker">Delivery focus</p>
+                                        <h3>Good implementation should make the product easier to trust almost immediately.</h3>
+                                        <ul class="detail-list">
+                                            <li>I connect technical decisions to user or business movement wherever possible.</li>
+                                            <li>I enjoy replacing slow manual workflows with dependable software.</li>
+                                            <li>I like product work where UI, APIs, and deployment all affect the outcome.</li>
+                                        </ul>
+                                    </article>
 
-                            <div class="switcher-panels">
-                                <article class="switcher-panel is-active" data-switcher-panel="approach">
-                                    <p class="switcher-kicker">Architecture mindset</p>
-                                    <ul class="detail-list">
-                                        <li>I look for the simplest design that can still scale cleanly.</li>
-                                        <li>I care about response times, release speed, and clean developer handoff.</li>
-                                        <li>I like systems where infrastructure and application code support each other well.</li>
-                                    </ul>
-                                </article>
-
-                                <article class="switcher-panel" data-switcher-panel="build" hidden>
-                                    <p class="switcher-kicker">Delivery focus</p>
-                                    <ul class="detail-list">
-                                        <li>I tie technical decisions to measurable user or business outcomes.</li>
-                                        <li>I enjoy turning manual processes into dependable software.</li>
-                                        <li>I prefer product work where UI, APIs, and deployment all matter.</li>
-                                    </ul>
-                                </article>
-
-                                <article class="switcher-panel" data-switcher-panel="teach" hidden>
-                                    <p class="switcher-kicker">Team contribution</p>
-                                    <ul class="detail-list">
-                                        <li>I explain technical tradeoffs in plain language.</li>
-                                        <li>I help teammates move faster without lowering standards.</li>
-                                        <li>I treat feedback, documentation, and teaching as engineering work.</li>
-                                    </ul>
-                                </article>
+                                    <article class="switcher-panel" data-switcher-panel="collaboration" hidden>
+                                        <p class="switcher-kicker">Team contribution</p>
+                                        <h3>Mentoring and teaching made communication part of how I engineer.</h3>
+                                        <ul class="detail-list">
+                                            <li>I explain technical tradeoffs in plain language.</li>
+                                            <li>I help teammates move faster without lowering standards.</li>
+                                            <li>I treat feedback, documentation, and teaching as real engineering work.</li>
+                                        </ul>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="about-proof">
-                    <article class="proof-card reveal">
-                        <span class="proof-value">40%</span>
-                        <p class="proof-title">user engagement lift</p>
-                        <p>E-commerce platform with React, Spring Boot, and Kubernetes.</p>
-                    </article>
-                    <article class="proof-card reveal">
-                        <span class="proof-value">35%</span>
-                        <p class="proof-title">higher load handling capacity</p>
-                        <p>Scalable microservices for a high-traffic production platform.</p>
-                    </article>
-                    <article class="proof-card reveal">
-                        <span class="proof-value">50%</span>
-                        <p class="proof-title">lower latency</p>
-                        <p>Real-time chat application with WebSocket and Spring Boot.</p>
-                    </article>
-                    <article class="proof-card reveal">
-                        <span class="proof-value">35+</span>
-                        <p class="proof-title">students mentored</p>
-                        <p>TA for programming and algorithms courses at University of Tulsa.</p>
-                    </article>
+                        <div class="about-proof">
+                            <article class="proof-card reveal">
+                                <span class="proof-value">40%</span>
+                                <p class="proof-title">engagement lift</p>
+                                <p>Improved a production e-commerce platform while also making transaction flow faster.</p>
+                            </article>
+
+                            <article class="proof-card reveal">
+                                <span class="proof-value">35%</span>
+                                <p class="proof-title">load handling improvement</p>
+                                <p>Used scalable services and better system structure to support higher traffic.</p>
+                            </article>
+
+                            <article class="proof-card reveal">
+                                <span class="proof-value">50%</span>
+                                <p class="proof-title">chat latency reduction</p>
+                                <p>Designed a real-time messaging experience that felt faster at both ends of the stack.</p>
+                            </article>
+
+                            <article class="proof-card reveal">
+                                <span class="proof-value">35+</span>
+                                <p class="proof-title">students supported</p>
+                                <p>Teaching assistant work across programming and algorithms reinforced clarity and code quality.</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ METRICS ═══════════════════════════════ -->
-        <section class="metrics">
-            <div class="container">
-                <div class="metrics-grid">
-                    <article class="metric-card reveal">
-                        <p class="metric-value"><span data-count="40" data-suffix="%">40%</span></p>
-                        <p class="metric-label">user engagement lift on a production e-commerce platform</p>
-                    </article>
-                    <article class="metric-card reveal">
-                        <p class="metric-value"><span data-count="35" data-suffix="%">35%</span></p>
-                        <p class="metric-label">more load handled after microservice optimization</p>
-                    </article>
-                    <article class="metric-card reveal">
-                        <p class="metric-value"><span data-count="50" data-suffix="%">50%</span></p>
-                        <p class="metric-label">lower latency in a real-time chat application</p>
-                    </article>
-                    <article class="metric-card reveal">
-                        <p class="metric-value"><span data-count="40" data-suffix="%">40%</span></p>
-                        <p class="metric-label">less manual work after replacing spreadsheet workflows</p>
-                    </article>
-                </div>
+        <section class="metrics section-gap">
+            <div class="container metrics-grid">
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="40" data-suffix="%">40%</span></p>
+                    <p class="metric-label">higher user engagement on a production e-commerce platform</p>
+                </article>
+
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="35" data-suffix="%">35%</span></p>
+                    <p class="metric-label">more load handled after service and performance improvements</p>
+                </article>
+
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="50" data-suffix="%">50%</span></p>
+                    <p class="metric-label">lower latency in a real-time communication product</p>
+                </article>
+
+                <article class="metric-card reveal">
+                    <p class="metric-value"><span data-count="40" data-suffix="%">40%</span></p>
+                    <p class="metric-label">less manual effort after replacing spreadsheet-heavy workflows</p>
+                </article>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ WORK ═══════════════════════════════ -->
         <section class="work section-pad" id="work">
             <div class="container">
-                <div class="section-label">02 / Work</div>
                 <div class="section-head reveal">
-                    <p class="eyebrow">Selected Work</p>
-                    <h2 class="section-title">Software with <span class="grad-text">measurable outcomes</span>.</h2>
-                    <p class="section-desc">Full-stack implementation, dependable systems, and features that clearly improve product performance.</p>
+                    <p class="eyebrow">Selected Projects</p>
+                    <h2>Case studies that show how I work across product, platform, and AI.</h2>
+                    <p>
+                        Each project has a dedicated page with the full challenge, build decisions, outcomes, and stack details.
+                    </p>
                 </div>
 
                 <div class="card-grid">
                     <article class="work-card reveal">
-                        <div class="work-media">
-                            <img src="assets/images/portfolio/p1.jpg" alt="E-commerce platform preview" loading="lazy" decoding="async">
-                            <div class="work-media-overlay">
-                                <a class="overlay-link" href="projects/ecommerce-platform/">View case study →</a>
-                            </div>
-                        </div>
+                        <a class="work-media" href="projects/ecommerce-platform/" aria-label="Open case study for the high-traffic e-commerce platform">
+                            <img src="assets/images/portfolio/p1.jpg" alt="Preview image representing a high-traffic e-commerce platform" loading="lazy" decoding="async">
+                            <span class="work-media-badge">Open case study</span>
+                        </a>
                         <div class="work-body">
                             <div class="card-topline">
                                 <span>Product Engineering</span>
                                 <span>Full Stack</span>
                             </div>
                             <h3>High-traffic e-commerce platform</h3>
-                            <p>Engineered a commerce platform using React, Spring Boot, and Kubernetes, improving engagement and transaction speed while supporting heavier traffic.</p>
+                            <p>Built a commerce platform with React, Spring Boot, and Kubernetes to improve customer engagement, transaction speed, and production resilience under heavier traffic.</p>
                             <ul class="work-stack" aria-label="Technologies used">
                                 <li>React</li>
                                 <li>Spring Boot</li>
@@ -293,110 +263,74 @@
                                 <li>Microservices</li>
                             </ul>
                             <div class="work-footer">
-                                <div class="card-metric">40% more engagement · 30% faster transactions</div>
-                                <div class="work-actions">
-                                    <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-commerce" data-detail-label-open="Open details" data-detail-label-close="Hide details">Open details</button>
-                                    <a class="button button-secondary button-compact" href="projects/ecommerce-platform/">View case study</a>
-                                </div>
-                            </div>
-                            <div class="work-details" id="work-detail-commerce" hidden>
-                                <ul class="detail-list detail-list-compact">
-                                    <li>Supported heavier traffic with scalable backend services and cleaner deployment orchestration.</li>
-                                    <li>Improved the customer experience through faster transactions and a more responsive interface.</li>
-                                    <li>Worked at the intersection of product delivery, platform reliability, and measurable performance.</li>
-                                </ul>
+                                <div class="card-metric">40% more engagement and 30% faster transactions</div>
+                                <a class="button button-secondary button-compact" href="projects/ecommerce-platform/">Read case study</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="work-media">
-                            <img src="assets/images/portfolio/p2.jpg" alt="Steel analysis platform preview" loading="lazy" decoding="async">
-                            <div class="work-media-overlay">
-                                <a class="overlay-link" href="projects/steel-analysis-platform/">View case study →</a>
-                            </div>
-                        </div>
+                        <a class="work-media" href="projects/steel-analysis-platform/" aria-label="Open case study for the steel analysis modernization platform">
+                            <img src="assets/images/portfolio/p2.jpg" alt="Preview image representing an enterprise workflow application" loading="lazy" decoding="async">
+                            <span class="work-media-badge">Open case study</span>
+                        </a>
                         <div class="work-body">
                             <div class="card-topline">
-                                <span>Enterprise App</span>
-                                <span>Internal Tools</span>
+                                <span>Enterprise Application</span>
+                                <span>Workflow Modernization</span>
                             </div>
                             <h3>Steel analysis modernization platform</h3>
-                            <p>Replaced spreadsheet-heavy steel analysis workflows with an Angular and ASP.NET Core application that reduced manual work and improved adoption.</p>
+                            <p>Replaced spreadsheet-driven analysis work with an Angular and ASP.NET Core application that reduced manual effort, improved responsiveness, and made adoption easier.</p>
                             <ul class="work-stack" aria-label="Technologies used">
                                 <li>Angular</li>
                                 <li>ASP.NET Core</li>
                                 <li>SQL Server</li>
-                                <li>Workflow Design</li>
+                                <li>Internal Tools</li>
                             </ul>
                             <div class="work-footer">
-                                <div class="card-metric">40% less manual work · 35% faster responses</div>
-                                <div class="work-actions">
-                                    <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-enterprise" data-detail-label-open="Open details" data-detail-label-close="Hide details">Open details</button>
-                                    <a class="button button-secondary button-compact" href="projects/steel-analysis-platform/">View case study</a>
-                                </div>
-                            </div>
-                            <div class="work-details" id="work-detail-enterprise" hidden>
-                                <ul class="detail-list detail-list-compact">
-                                    <li>Moved teams away from spreadsheet-heavy processes toward a dependable web workflow.</li>
-                                    <li>Improved onboarding by giving users a clearer interface and more consistent data flow.</li>
-                                    <li>Translated stakeholder feedback into weekly progress and visible product improvements.</li>
-                                </ul>
+                                <div class="card-metric">40% less manual work and 35% faster responses</div>
+                                <a class="button button-secondary button-compact" href="projects/steel-analysis-platform/">Read case study</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="work-media">
-                            <img src="assets/images/portfolio/p3.jpg" alt="AI recommender system preview" loading="lazy" decoding="async">
-                            <div class="work-media-overlay">
-                                <a class="overlay-link" href="projects/ai-recommender-system/">View case study →</a>
-                            </div>
-                        </div>
+                        <a class="work-media" href="projects/ai-recommender-system/" aria-label="Open case study for the LLM-based AI recommender system">
+                            <img src="assets/images/portfolio/p3.jpg" alt="Preview image representing an AI-powered recommendation system" loading="lazy" decoding="async">
+                            <span class="work-media-badge">Open case study</span>
+                        </a>
                         <div class="work-body">
                             <div class="card-topline">
-                                <span>AI Applications</span>
+                                <span>Applied AI</span>
                                 <span>OpenAI API</span>
                             </div>
                             <h3>LLM-based AI recommender system</h3>
-                            <p>Built an LLM-powered recommender in Python with OpenAI API and PostgreSQL, improving engagement and accuracy while accelerating query performance.</p>
+                            <p>Built a recommendation workflow with Python, OpenAI API, and PostgreSQL to improve relevance, engagement, and query performance without turning the model into a novelty.</p>
                             <ul class="work-stack" aria-label="Technologies used">
                                 <li>Python</li>
                                 <li>OpenAI API</li>
                                 <li>PostgreSQL</li>
-                                <li>Prompt Design</li>
+                                <li>Evaluation</li>
                             </ul>
                             <div class="work-footer">
-                                <div class="card-metric">35% stronger engagement & accuracy · 30% faster queries</div>
-                                <div class="work-actions">
-                                    <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-ai" data-detail-label-open="Open details" data-detail-label-close="Hide details">Open details</button>
-                                    <a class="button button-secondary button-compact" href="projects/ai-recommender-system/">View case study</a>
-                                </div>
-                            </div>
-                            <div class="work-details" id="work-detail-ai" hidden>
-                                <ul class="detail-list detail-list-compact">
-                                    <li>Combined language model behavior with structured data to improve recommendation quality.</li>
-                                    <li>Focused on practical latency and query improvements rather than treating the model as a demo.</li>
-                                    <li>Used experimentation to balance accuracy, speed, and usability for real engagement gains.</li>
-                                </ul>
+                                <div class="card-metric">35% stronger engagement and 30% faster queries</div>
+                                <a class="button button-secondary button-compact" href="projects/ai-recommender-system/">Read case study</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="work-media">
-                            <img src="assets/images/portfolio/p4.jpg" alt="Real-time chat application preview" loading="lazy" decoding="async">
-                            <div class="work-media-overlay">
-                                <a class="overlay-link" href="projects/real-time-chat-application/">View case study →</a>
-                            </div>
-                        </div>
+                        <a class="work-media" href="projects/real-time-chat-application/" aria-label="Open case study for the real-time chat application">
+                            <img src="assets/images/portfolio/p4.jpg" alt="Preview image representing a real-time messaging application" loading="lazy" decoding="async">
+                            <span class="work-media-badge">Open case study</span>
+                        </a>
                         <div class="work-body">
                             <div class="card-topline">
                                 <span>Real-Time Systems</span>
                                 <span>Full Stack</span>
                             </div>
                             <h3>Real-time chat application</h3>
-                            <p>Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL for instant messaging, status updates, and faster data retrieval.</p>
+                            <p>Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL to reduce latency, improve retrieval speed, and keep live interactions dependable.</p>
                             <ul class="work-stack" aria-label="Technologies used">
                                 <li>Angular</li>
                                 <li>Spring Boot</li>
@@ -404,18 +338,8 @@
                                 <li>MySQL</li>
                             </ul>
                             <div class="work-footer">
-                                <div class="card-metric">50% lower latency · 30% faster message retrieval</div>
-                                <div class="work-actions">
-                                    <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-chat" data-detail-label-open="Open details" data-detail-label-close="Hide details">Open details</button>
-                                    <a class="button button-secondary button-compact" href="projects/real-time-chat-application/">View case study</a>
-                                </div>
-                            </div>
-                            <div class="work-details" id="work-detail-chat" hidden>
-                                <ul class="detail-list detail-list-compact">
-                                    <li>Optimized the system for lower message latency and faster retrieval under active usage.</li>
-                                    <li>Built around real-time presence, status handling, and dependable server-client communication.</li>
-                                    <li>Used full-stack coordination so the interface and backend stayed responsive together.</li>
-                                </ul>
+                                <div class="card-metric">50% lower latency and 30% faster retrieval</div>
+                                <a class="button button-secondary button-compact" href="projects/real-time-chat-application/">Read case study</a>
                             </div>
                         </div>
                     </article>
@@ -423,53 +347,43 @@
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
         <section class="experience section-pad" id="experience">
             <div class="container">
-                <div class="section-label">03 / Experience</div>
                 <div class="section-head reveal">
                     <p class="eyebrow">Experience</p>
-                    <h2 class="section-title">Industry and teaching roles that <span class="grad-text">shaped how I build</span>.</h2>
+                    <h2>Industry, internship, and teaching roles that shaped how I build.</h2>
                 </div>
 
                 <div class="timeline">
-                    <article class="timeline-item reveal">
-                        <p class="timeline-date">May 2024 – Aug. 2024</p>
-                        <div class="timeline-card">
-                            <h3>Software Engineering Intern</h3>
-                            <p class="timeline-place">Arcosa, Inc. · Tulsa, OK</p>
-                            <p>Modernized legacy steel analysis workflows by replacing Excel with a web application, built and maintained ASP.NET Core APIs, delivered an Angular interface that reduced onboarding time, and presented progress weekly to stakeholders.</p>
-                        </div>
+                    <article class="timeline-card reveal">
+                        <p class="timeline-date">May 2024 to Aug. 2024</p>
+                        <h3>Software Engineering Intern</h3>
+                        <p class="timeline-place">Arcosa, Inc. | Tulsa, OK</p>
+                        <p>Modernized legacy steel analysis workflows by replacing Excel with a web application, building ASP.NET Core APIs, and delivering an Angular interface that made onboarding easier for internal teams.</p>
                     </article>
 
-                    <article class="timeline-item reveal">
-                        <p class="timeline-date">July 2023 – May 2025</p>
-                        <div class="timeline-card">
-                            <h3>Teaching Assistant</h3>
-                            <p class="timeline-place">University of Tulsa · Tulsa, OK</p>
-                            <p>Supported more than 35 students in programming and algorithms, reinforced strong coding standards, and helped translate hard technical ideas into practical learning.</p>
-                        </div>
+                    <article class="timeline-card reveal">
+                        <p class="timeline-date">July 2023 to May 2025</p>
+                        <h3>Teaching Assistant</h3>
+                        <p class="timeline-place">University of Tulsa | Tulsa, OK</p>
+                        <p>Supported more than 35 students in programming and algorithms, reinforced strong coding standards, and translated difficult technical ideas into practical learning steps.</p>
                     </article>
 
-                    <article class="timeline-item reveal">
-                        <p class="timeline-date">June 2021 – July 2023</p>
-                        <div class="timeline-card">
-                            <h3>Associate Software Developer</h3>
-                            <p class="timeline-place">TechImpulsers · Remote</p>
-                            <p>Built high-traffic product features with React and Spring Boot, improved scalability with microservices, automated delivery with Jenkins and Docker, and mentored junior developers while collaborating across teams.</p>
-                        </div>
+                    <article class="timeline-card reveal">
+                        <p class="timeline-date">June 2021 to July 2023</p>
+                        <h3>Associate Software Developer</h3>
+                        <p class="timeline-place">TechImpulsers | Remote</p>
+                        <p>Built high-traffic product features with React and Spring Boot, improved scalability through microservices, automated releases with Jenkins and Docker, and mentored junior developers.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
         <section class="skills section-pad" id="skills">
             <div class="container">
-                <div class="section-label">04 / Skills</div>
                 <div class="section-head reveal">
                     <p class="eyebrow">Skills</p>
-                    <h2 class="section-title">Technical range with an <span class="grad-text">AI edge</span>.</h2>
+                    <h2>Technical range grounded in full-stack engineering with an AI edge.</h2>
                 </div>
 
                 <div class="skill-spotlight reveal">
@@ -483,28 +397,43 @@
                         <div class="switcher-panels">
                             <article class="switcher-panel is-active" data-switcher-panel="product-stack">
                                 <p class="switcher-kicker">Where I spend most of my time</p>
-                                <h3>Designing and shipping product-facing applications from UI to backend services.</h3>
-                                <p>My strongest work combines interface quality, dependable APIs, and clean delivery workflows rather than treating each layer in isolation.</p>
+                                <h3>Designing and shipping product-facing applications from the interface to backend services.</h3>
+                                <p>My best work combines interface quality, dependable APIs, and clean delivery workflows rather than treating each layer in isolation.</p>
                                 <ul class="chip-list chip-list-strong">
-                                    <li>React</li><li>Angular</li><li>Spring Boot</li><li>.NET Core</li><li>REST APIs</li><li>SQL</li>
+                                    <li>React</li>
+                                    <li>Angular</li>
+                                    <li>Spring Boot</li>
+                                    <li>.NET Core</li>
+                                    <li>REST APIs</li>
+                                    <li>SQL</li>
                                 </ul>
                             </article>
 
                             <article class="switcher-panel" data-switcher-panel="ai-workflow" hidden>
                                 <p class="switcher-kicker">Applied intelligence</p>
-                                <h3>I use machine learning and LLM systems where they improve a concrete user workflow.</h3>
-                                <p>Research background helps, but the real value comes from shaping prompts, data flow, latency, and evaluation around an actual product need.</p>
+                                <h3>I use machine learning and LLM systems where they improve a real workflow.</h3>
+                                <p>Research depth matters, but product value comes from shaping prompts, data flow, latency, and evaluation around a specific user need.</p>
                                 <ul class="chip-list chip-list-strong">
-                                    <li>OpenAI API</li><li>Python</li><li>Transformers</li><li>PostgreSQL</li><li>Prompt Design</li><li>Evaluation</li>
+                                    <li>OpenAI API</li>
+                                    <li>Python</li>
+                                    <li>Transformers</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Prompt Design</li>
+                                    <li>Evaluation</li>
                                 </ul>
                             </article>
 
                             <article class="switcher-panel" data-switcher-panel="platform-delivery" hidden>
                                 <p class="switcher-kicker">Reliability and scale</p>
-                                <h3>I care about infrastructure and automation that lets good software stay good under real usage.</h3>
-                                <p>That includes containerized deployment, cloud services, release pipelines, and architecture choices that support future growth.</p>
+                                <h3>I care about the infrastructure and automation that let good software stay good under real usage.</h3>
+                                <p>That includes containerized deployment, cloud services, release pipelines, and architecture choices that support future growth instead of slowing it down.</p>
                                 <ul class="chip-list chip-list-strong">
-                                    <li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>AWS</li><li>Azure</li><li>Terraform</li>
+                                    <li>Docker</li>
+                                    <li>Kubernetes</li>
+                                    <li>Jenkins</li>
+                                    <li>AWS</li>
+                                    <li>Azure</li>
+                                    <li>Terraform</li>
                                 </ul>
                             </article>
                         </div>
@@ -515,107 +444,135 @@
                     <article class="skill-group reveal">
                         <h3>Programming Languages</h3>
                         <ul class="chip-list">
-                            <li>Java</li><li>C#</li><li>C++</li><li>Python</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li>
+                            <li>Java</li>
+                            <li>C#</li>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
                         </ul>
                     </article>
 
                     <article class="skill-group reveal">
                         <h3>Frameworks</h3>
                         <ul class="chip-list">
-                            <li>React</li><li>Angular</li><li>Spring Boot</li><li>.NET Core</li><li>Flask</li><li>Node.js</li>
+                            <li>React</li>
+                            <li>Angular</li>
+                            <li>Spring Boot</li>
+                            <li>.NET Core</li>
+                            <li>Flask</li>
+                            <li>Node.js</li>
                         </ul>
                     </article>
 
                     <article class="skill-group reveal">
                         <h3>Cloud and DevOps</h3>
                         <ul class="chip-list">
-                            <li>AWS EC2</li><li>AWS CloudFront</li><li>AWS S3</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Terraform</li><li>Git</li>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Jenkins</li>
+                            <li>Terraform</li>
+                            <li>Git</li>
+                            <li>JIRA</li>
                         </ul>
                     </article>
 
                     <article class="skill-group reveal">
                         <h3>Data and Platforms</h3>
                         <ul class="chip-list">
-                            <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQL Server</li><li>Redis</li><li>REST APIs</li><li>WebSocket</li><li>Microservices</li>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>SQL Server</li>
+                            <li>Redis</li>
+                            <li>WebSocket</li>
+                            <li>Microservices</li>
+                            <li>REST APIs</li>
                         </ul>
                     </article>
 
                     <article class="skill-group reveal">
                         <h3>Applied AI and Foundations</h3>
                         <ul class="chip-list">
-                            <li>OpenAI API</li><li>Large Language Models</li><li>Transformers</li><li>Q-Learning</li><li>Unsupervised Learning</li><li>Statistical Pattern Recognition</li>
+                            <li>OpenAI API</li>
+                            <li>Large Language Models</li>
+                            <li>Transformers</li>
+                            <li>Q-Learning</li>
+                            <li>Unsupervised Learning</li>
+                            <li>Statistical Pattern Recognition</li>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
                         </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
         <section class="education section-pad">
-            <div class="container">
-                <div class="section-label">05 / Education</div>
-                <div class="split-grid">
-                    <div class="education-stack">
-                        <div class="section-head-left reveal">
-                            <p class="eyebrow">Education</p>
-                            <h2>Academic foundation.</h2>
-                        </div>
-
-                        <article class="info-card reveal">
-                            <p class="info-date">Expected 2028</p>
-                            <h3>PhD in Computer Science</h3>
-                            <p class="info-place">University of Tulsa · Tulsa, OK</p>
-                            <p>Relevant coursework includes Machine Learning and Statistical Pattern Recognition.</p>
-                        </article>
-
-                        <article class="info-card reveal">
-                            <p class="info-date">June 2021</p>
-                            <h3>BS in Electrical Engineering</h3>
-                            <p class="info-place">University of Engineering and Technology · Lahore, Pakistan</p>
-                            <p>Best Final Year Project · PEEF Scholarship</p>
-                        </article>
+            <div class="container split-grid">
+                <div class="education-stack reveal">
+                    <div class="section-head section-head-left">
+                        <p class="eyebrow">Education</p>
+                        <h2>Academic foundation.</h2>
                     </div>
 
-                    <div class="education-stack">
-                        <div class="section-head-left reveal">
-                            <p class="eyebrow">Credentials</p>
-                            <h2>Signals beyond the classroom.</h2>
-                        </div>
+                    <article class="info-card">
+                        <p class="info-date">Expected 2028</p>
+                        <h3>PhD in Computer Science</h3>
+                        <p class="info-place">University of Tulsa, Tulsa, OK</p>
+                        <p>Relevant coursework includes machine learning and statistical pattern recognition.</p>
+                    </article>
 
-                        <article class="info-card reveal">
-                            <p class="info-date">Program</p>
-                            <h3>JOLT Fellow</h3>
-                            <p class="info-place">Entrepreneurship Program · University of Tulsa</p>
-                            <p>Built business and product thinking alongside technical training.</p>
-                        </article>
+                    <article class="info-card">
+                        <p class="info-date">June 2021</p>
+                        <h3>BS in Electrical Engineering</h3>
+                        <p class="info-place">University of Engineering and Technology, Lahore, Pakistan</p>
+                        <p>Best final year project and PEEF scholarship recipient.</p>
+                    </article>
+                </div>
 
-                        <article class="info-card reveal">
-                            <p class="info-date">Certifications</p>
-                            <h3>LinkedIn Learning</h3>
-                            <p class="info-place">Continuous upskilling</p>
-                            <p>JavaScript Essential Training, ReactJS, and SQL.</p>
-                        </article>
-
-                        <article class="info-card reveal">
-                            <p class="info-date">Coding Profile</p>
-                            <h3>Hands-on practice</h3>
-                            <p class="info-place">LeetCode · GitHub · shipped projects</p>
-                            <p>Active coding practice supported by real project delivery and interview-style problem solving.</p>
-                        </article>
+                <div class="education-stack reveal">
+                    <div class="section-head section-head-left">
+                        <p class="eyebrow">Credentials</p>
+                        <h2>Signals beyond the classroom.</h2>
                     </div>
+
+                    <article class="info-card">
+                        <p class="info-date">Program</p>
+                        <h3>JOLT Fellow</h3>
+                        <p class="info-place">Entrepreneurship Program at the University of Tulsa</p>
+                        <p>Built business and product thinking alongside technical training.</p>
+                    </article>
+
+                    <article class="info-card">
+                        <p class="info-date">Certifications</p>
+                        <h3>LinkedIn Learning</h3>
+                        <p class="info-place">Continuous upskilling</p>
+                        <p>Completed training in JavaScript, React, and SQL.</p>
+                    </article>
+
+                    <article class="info-card">
+                        <p class="info-date">Coding Profile</p>
+                        <h3>Hands-on practice</h3>
+                        <p class="info-place">LeetCode, GitHub, and shipped projects</p>
+                        <p>Active practice supported by real project delivery and consistent problem solving.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
         <section class="contact section-pad" id="contact">
             <div class="container">
-                <div class="section-label">06 / Contact</div>
                 <div class="contact-shell reveal">
                     <div class="contact-copy">
-                        <p class="eyebrow">Get in touch</p>
-                        <h2>Looking for someone who can <span class="grad-text">build and communicate</span>?</h2>
-                        <p>I am open to research, machine learning engineering, and software opportunities where strong implementation and clear communication both matter.</p>
+                        <p class="eyebrow">Contact</p>
+                        <h2>Looking for someone who can build dependable software and communicate clearly?</h2>
+                        <p>
+                            I am open to software engineering, machine learning engineering, and research-oriented opportunities where implementation quality and clear collaboration both matter.
+                        </p>
                     </div>
 
                     <div class="contact-actions">
@@ -623,18 +580,16 @@
                         <a class="button button-secondary" href="https://github.com/noumahme" target="_blank" rel="noreferrer">GitHub</a>
                         <a class="button button-secondary" href="https://www.linkedin.com/in/noumahme/" target="_blank" rel="noreferrer">LinkedIn</a>
                         <a class="button button-secondary" href="https://leetcode.com/u/noumahme/" target="_blank" rel="noreferrer">LeetCode</a>
-                        <a class="button button-secondary" href="assets/download/resume.pdf" download>Resume</a>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>Nouman Ahmed</p>
-            <p>PhD researcher and software engineer — building scalable software and practical AI features.</p>
+            <p>Software engineer and PhD researcher focused on full-stack systems, practical AI, and reliable product delivery.</p>
         </div>
     </footer>
 

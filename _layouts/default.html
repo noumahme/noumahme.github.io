@@ -9,19 +9,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{ '/assets/logo/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 </head>
 <body class="page-project{% if page.body_class %} {{ page.body_class }}{% endif %}">
-    <!-- Ambient background -->
-    <div class="bg-orbs" aria-hidden="true">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-    </div>
     <div class="page-noise" aria-hidden="true"></div>
+    <div class="page-glow page-glow-a" aria-hidden="true"></div>
+    <div class="page-glow page-glow-b" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="top">
@@ -54,7 +50,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>{{ site.title }}</p>
-            <p>PhD researcher and software engineer — building scalable software and practical AI features.</p>
+            <p>Software engineer and PhD researcher focused on full-stack systems, practical AI, and reliable product delivery.</p>
         </div>
     </footer>
 
