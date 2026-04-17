@@ -1,27 +1,18 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1240px) {
     .hero-shell,
     .page-hero-shell,
     .about-grid,
-    .detail-split-grid,
     .split-grid,
     .contact-shell {
         grid-template-columns: 1fr;
     }
 
-    .focus-strip-grid,
-    .card-grid,
     .detail-content-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .metrics-grid,
-    .detail-metrics-grid {
+    .timeline {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-shell,
-    .page-hero-shell {
-        gap: 2rem;
     }
 
     .hero-visual,
@@ -32,83 +23,81 @@
     .portrait-shell {
         max-width: 30rem;
     }
+}
+
+@media screen and (max-width: 1024px) {
+    .section-pad {
+        padding: 5rem 0;
+    }
+
+    .focus-strip-grid,
+    .card-grid,
+    .metrics-grid,
+    .detail-metrics-grid,
+    .skills-grid,
+    .detail-content-grid,
+    .detail-split-grid,
+    .timeline {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-group,
+    .skill-group:nth-child(4),
+    .skill-group:nth-child(5) {
+        grid-column: auto;
+    }
 
     .about-proof {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .work-card:nth-child(2n) {
-        margin-top: 0;
+    .hero-shell,
+    .page-hero-shell {
+        gap: 2rem;
     }
 }
 
-@media screen and (max-width: 960px) {
-    .section-pad {
-        padding: 5rem 0;
-    }
-
-    .focus-strip {
-        padding-bottom: 4rem;
-    }
-
-    .section-overlap {
-        margin-top: -2.5rem;
-    }
-
-    .focus-strip-grid,
-    .metrics-grid,
-    .detail-metrics-grid,
-    .card-grid,
-    .skills-grid,
-    .detail-content-grid,
-    .detail-split-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline::before {
-        left: 0.55rem;
-    }
-
-    .timeline-item {
-        grid-template-columns: 1fr;
-        gap: 0.85rem;
-        padding-left: 1.95rem;
-    }
-
-    .timeline-item::before {
-        left: 0;
-    }
-
+@media screen and (max-width: 920px) {
     .menu-toggle {
         display: inline-block;
     }
 
     .site-nav {
         position: absolute;
-        top: calc(100% + 0.65rem);
+        top: calc(100% + 0.7rem);
         right: 1rem;
         left: 1rem;
         display: grid;
         gap: 0.2rem;
         padding: 0.85rem;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-radius: 1.4rem;
-        background: rgba(11, 33, 64, 0.96);
-        box-shadow: 0 24px 46px rgba(11, 33, 64, 0.24);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 1.5rem;
+        background: rgba(7, 23, 35, 0.96);
+        box-shadow: 0 28px 50px rgba(5, 24, 37, 0.3);
         opacity: 0;
         visibility: hidden;
         transform: translateY(-8px);
         transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
     }
 
+    .site-nav a {
+        padding: 0.8rem 0.45rem;
+        color: rgba(243, 251, 253, 0.8);
+    }
+
+    .site-nav a.is-active,
+    .site-nav a:hover {
+        color: #fbffff;
+    }
+
     .site-header.menu-open .site-nav {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-    }
-
-    .site-nav a {
-        padding: 0.75rem 0.45rem;
     }
 
     .site-header.menu-open .menu-toggle span:nth-child(1) {
@@ -129,20 +118,18 @@
     }
 
     .hero-shell,
-    .page-hero-shell {
-        padding: 2rem;
+    .page-hero-shell,
+    .about-shell,
+    .skill-spotlight,
+    .contact-shell {
+        padding: 1.8rem;
     }
 
-    .signal-card-a {
-        left: 0;
-    }
-
-    .signal-card-b {
-        right: 0;
-    }
-
-    .contact-actions {
-        width: 100%;
+    .section-head h2,
+    .focus-strip-head h2,
+    .about-intro h2,
+    .contact-copy h2 {
+        max-width: 42rem;
     }
 }
 
@@ -156,22 +143,34 @@
         padding-right: 0.8rem;
     }
 
-    .hero-shell,
-    .page-hero-shell,
-    .about-shell,
-    .contact-shell,
-    .skill-spotlight,
-    .detail-card {
-        padding: 1.45rem;
+    .section-pad {
+        padding: 4.4rem 0;
+    }
+
+    .page-project .section-overlap {
+        margin-top: -2rem;
+    }
+
+    .focus-strip-grid,
+    .card-grid,
+    .metrics-grid,
+    .detail-metrics-grid,
+    .about-proof,
+    .skills-grid,
+    .split-grid,
+    .detail-content-grid,
+    .detail-split-grid,
+    .timeline {
+        grid-template-columns: 1fr;
     }
 
     .hero-name-small {
-        font-size: clamp(2.6rem, 14vw, 3.9rem);
+        font-size: clamp(2.5rem, 14vw, 3.8rem);
     }
 
     .hero-name-large,
     .page-hero-copy h1 {
-        font-size: clamp(3.25rem, 16vw, 4.9rem);
+        font-size: clamp(3.15rem, 16vw, 4.8rem);
     }
 
     .hero-summary,
@@ -200,10 +199,6 @@
         margin-top: 0.85rem;
     }
 
-    .about-proof {
-        grid-template-columns: 1fr;
-    }
-
     .work-media {
         min-height: 13rem;
     }
@@ -212,12 +207,17 @@
         align-items: stretch;
     }
 
-    .work-actions {
+    .work-actions,
+    .contact-actions {
         width: 100%;
     }
 
     .page-hero-media {
         min-height: 18rem;
+    }
+
+    .timeline-item {
+        gap: 0.75rem;
     }
 
     .button,
@@ -227,36 +227,31 @@
 }
 
 @media screen and (max-width: 560px) {
-    .section-pad {
-        padding: 4rem 0;
-    }
-
-    .focus-strip {
-        padding-bottom: 3rem;
-    }
-
-    .section-overlap {
-        margin-top: -1.5rem;
-    }
-
     .brand-text {
         font-size: 0.92rem;
     }
 
-    .hero-meta {
-        display: grid;
-    }
-
+    .hero-shell,
+    .page-hero-shell,
+    .about-shell,
+    .skill-spotlight,
+    .contact-shell,
+    .detail-card,
     .focus-card,
+    .proof-card,
     .metric-card,
     .timeline-card,
     .skill-group,
     .info-card {
-        padding: 1.25rem;
+        padding: 1.3rem;
     }
 
     .work-body {
-        padding: 1.25rem;
+        padding: 1.3rem;
+    }
+
+    .hero-meta {
+        display: grid;
     }
 
     .card-metric {

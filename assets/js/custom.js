@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealItems = document.querySelectorAll(".reveal");
     const metricValues = document.querySelectorAll("[data-count]");
     const motionShells = document.querySelectorAll(".hero-shell, .page-hero-shell");
+    const motionCards = document.querySelectorAll(
+        ".focus-card, .proof-card, .metric-card, .work-card, .timeline-card, .skill-group, .info-card, .detail-card"
+    );
     const switchers = document.querySelectorAll("[data-switcher]");
     const scrollProgress = document.querySelector(".scroll-progress span");
     const detailToggles = Array.from(document.querySelectorAll(".detail-toggle"));
@@ -98,7 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const currentId = entry.target.getAttribute("id");
 
                 navLinks.forEach((link) => {
-                    const matches = link.getAttribute("href") === `#${currentId}`;
+                    const href = link.getAttribute("href") || "";
+                    const matches = href === `#${currentId}` || href.endsWith(`#${currentId}`);
                     link.classList.toggle("is-active", matches);
                 });
             });
@@ -266,6 +270,28 @@ document.addEventListener("DOMContentLoaded", () => {
             shell.addEventListener("pointerleave", () => {
                 shell.style.setProperty("--pointer-x", "18%");
                 shell.style.setProperty("--pointer-y", "24%");
+            });
+        });
+
+        motionCards.forEach((card) => {
+            card.addEventListener("pointermove", (event) => {
+                const bounds = card.getBoundingClientRect();
+                const offsetX = (event.clientX - bounds.left) / bounds.width;
+                const offsetY = (event.clientY - bounds.top) / bounds.height;
+                const rotateY = (offsetX - 0.5) * 10;
+                const rotateX = (0.5 - offsetY) * 10;
+
+                card.style.setProperty("--card-rotate-x", `${rotateX.toFixed(2)}deg`);
+                card.style.setProperty("--card-rotate-y", `${rotateY.toFixed(2)}deg`);
+                card.style.setProperty("--card-glow-x", `${(offsetX * 100).toFixed(2)}%`);
+                card.style.setProperty("--card-glow-y", `${(offsetY * 100).toFixed(2)}%`);
+            });
+
+            card.addEventListener("pointerleave", () => {
+                card.style.setProperty("--card-rotate-x", "0deg");
+                card.style.setProperty("--card-rotate-y", "0deg");
+                card.style.setProperty("--card-glow-x", "50%");
+                card.style.setProperty("--card-glow-y", "20%");
             });
         });
     }
