@@ -91,3 +91,48 @@ layout: default
         </div>
     </div>
 </section>
+
+{% assign project_pages = site.pages | where: "layout", "project" | sort: "order" %}
+<section class="section-pad">
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="eyebrow">More Projects</p>
+            <h2>Other case studies built with the same full-stack and AI mindset.</h2>
+            <p>
+                Each project page uses the same portfolio language as the homepage, so moving between the overview and the deeper case studies stays consistent.
+            </p>
+        </div>
+
+        <div class="card-grid related-grid">
+            {% for project in project_pages %}
+            {% unless project.url == page.url %}
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt }}" loading="lazy" decoding="async">
+                </div>
+                <div class="work-body">
+                    <div class="card-topline">
+                        {% for tag in project.project_tags limit:2 %}
+                        <span>{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.summary }}</p>
+                    <ul class="work-stack" aria-label="Technologies used">
+                        {% for item in project.stack limit:4 %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="work-footer">
+                        <div class="card-metric">{{ project.metrics[0].value }} {{ project.metrics[0].label }}</div>
+                        <div class="work-actions">
+                            <a class="button button-secondary button-compact" href="{{ project.url | relative_url }}">Open case study</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

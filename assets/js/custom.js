@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
     const revealItems = document.querySelectorAll(".reveal");
     const metricValues = document.querySelectorAll("[data-count]");
-    const heroShell = document.querySelector(".hero-shell");
+    const motionShells = document.querySelectorAll(".hero-shell, .page-hero-shell");
     const switchers = document.querySelectorAll("[data-switcher]");
     const scrollProgress = document.querySelector(".scroll-progress span");
     const detailToggles = Array.from(document.querySelectorAll(".detail-toggle"));
@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             desktopNavBreakpoint.addListener(syncMenuForDesktop);
         }
     }
+
+    revealItems.forEach((item, index) => {
+        item.style.setProperty("--reveal-delay", `${Math.min(index * 65, 520)}ms`);
+    });
 
     if (prefersReducedMotion.matches) {
         revealItems.forEach((item) => item.classList.add("is-visible"));
@@ -248,19 +252,21 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", requestScrollProgressUpdate, { passive: true });
     window.addEventListener("resize", updateScrollProgress);
 
-    if (heroShell && !prefersReducedMotion.matches && window.matchMedia("(pointer:fine)").matches) {
-        heroShell.addEventListener("pointermove", (event) => {
-            const bounds = heroShell.getBoundingClientRect();
-            const x = ((event.clientX - bounds.left) / bounds.width) * 100;
-            const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+    if (!prefersReducedMotion.matches && window.matchMedia("(pointer:fine)").matches) {
+        motionShells.forEach((shell) => {
+            shell.addEventListener("pointermove", (event) => {
+                const bounds = shell.getBoundingClientRect();
+                const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+                const y = ((event.clientY - bounds.top) / bounds.height) * 100;
 
-            heroShell.style.setProperty("--pointer-x", `${x}%`);
-            heroShell.style.setProperty("--pointer-y", `${y}%`);
-        });
+                shell.style.setProperty("--pointer-x", `${x}%`);
+                shell.style.setProperty("--pointer-y", `${y}%`);
+            });
 
-        heroShell.addEventListener("pointerleave", () => {
-            heroShell.style.setProperty("--pointer-x", "18%");
-            heroShell.style.setProperty("--pointer-y", "24%");
+            shell.addEventListener("pointerleave", () => {
+                shell.style.setProperty("--pointer-x", "18%");
+                shell.style.setProperty("--pointer-y", "24%");
+            });
         });
     }
 });
