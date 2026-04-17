@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="page-hero section-pad">
     <div class="container">
-        <div class="page-hero-shell reveal">
+        <div class="page-hero-grid reveal">
             <div class="page-hero-copy">
                 <a class="page-breadcrumb" href="{{ '/' | relative_url }}#work">Back to selected projects</a>
                 <p class="eyebrow">{{ page.eyebrow }}</p>
@@ -11,7 +11,7 @@ layout: default
                 <p class="page-summary">{{ page.summary }}</p>
 
                 {% if page.project_tags %}
-                <ul class="chip-list page-tags" aria-label="Project categories">
+                <ul class="page-tags" aria-label="Project categories">
                     {% for item in page.project_tags %}
                     <li>{{ item }}</li>
                     {% endfor %}
@@ -24,32 +24,31 @@ layout: default
                 </div>
             </div>
 
-            <div class="page-hero-visual">
+            <div class="page-hero-side">
                 <div class="page-hero-media">
                     <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" loading="eager" decoding="async">
                 </div>
 
-                {% if page.metrics and page.metrics.size > 0 %}
-                <article class="signal-card signal-card-a">
-                    <span class="signal-label">Headline result</span>
-                    <strong>{{ page.metrics[0].value }} {{ page.metrics[0].label }}</strong>
-                    <p>{{ page.project_tags | first }}</p>
-                </article>
-                {% endif %}
-
-                {% if page.metrics and page.metrics.size > 1 %}
-                <article class="signal-card signal-card-b">
-                    <span class="signal-label">Supporting result</span>
-                    <strong>{{ page.metrics[1].value }} {{ page.metrics[1].label }}</strong>
-                    <p>{{ page.stack | slice: 0, 3 | join: ", " }}</p>
-                </article>
-                {% endif %}
+                <div class="summary-card">
+                    <div class="summary-row">
+                        <span class="summary-label">Project type</span>
+                        <strong>{{ page.project_tags | join: ", " }}</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Core stack</span>
+                        <strong>{{ page.stack | slice: 0, 4 | join: ", " }}</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Headline result</span>
+                        <strong>{{ page.metrics[0].value }} {{ page.metrics[0].label }}</strong>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="metrics section-gap">
+<section class="results section-gap">
     <div class="container detail-metrics-grid">
         {% for metric in page.metrics %}
         <article class="metric-card reveal">
@@ -85,7 +84,7 @@ layout: default
         <div class="detail-split-grid">
             <article class="detail-card reveal">
                 <p class="eyebrow">Highlights</p>
-                <h2>What shaped the result</h2>
+                <h2>Main points</h2>
                 <ul class="detail-list">
                     {% for item in page.highlights %}
                     <li>{{ item }}</li>
@@ -95,8 +94,8 @@ layout: default
 
             <article class="detail-card reveal">
                 <p class="eyebrow">Technology</p>
-                <h2>Stack used on the project</h2>
-                <ul class="chip-list chip-list-strong">
+                <h2>Stack used</h2>
+                <ul class="chip-list">
                     {% for item in page.stack %}
                     <li>{{ item }}</li>
                     {% endfor %}
@@ -111,8 +110,8 @@ layout: default
     <div class="container">
         <div class="section-head reveal">
             <p class="eyebrow">More Projects</p>
-            <h2>Other case studies built with the same product and systems mindset.</h2>
-            <p>These project pages use the same visual language as the main portfolio so the detailed view feels like a continuation, not a separate template.</p>
+            <h2>Other case studies from the same portfolio.</h2>
+            <p>These pages follow the same layout so the project detail view stays consistent with the main site.</p>
         </div>
 
         <div class="card-grid related-grid">
@@ -121,7 +120,6 @@ layout: default
             <article class="work-card reveal">
                 <a class="work-media" href="{{ project.url | relative_url }}" aria-label="Open case study for {{ project.title }}">
                     <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt }}" loading="lazy" decoding="async">
-                    <span class="work-media-badge">Open case study</span>
                 </a>
                 <div class="work-body">
                     <div class="card-topline">
