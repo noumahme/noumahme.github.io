@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="page-hero section-pad">
+<section class="page-hero section-overlap">
     <div class="container">
         <div class="page-hero-shell reveal">
             <div class="page-hero-copy">
@@ -95,12 +95,9 @@ layout: default
 {% assign project_pages = site.pages | where: "layout", "project" | sort: "order" %}
 <section class="section-pad">
     <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head center reveal">
             <p class="eyebrow">More Projects</p>
-            <h2>Other case studies built with the same full-stack and AI mindset.</h2>
-            <p>
-                Each project page uses the same portfolio language as the homepage, so moving between the overview and the deeper case studies stays consistent.
-            </p>
+            <h2 class="section-title">Other <span class="grad-text">case studies</span> built with the same full-stack and AI mindset.</h2>
         </div>
 
         <div class="card-grid related-grid">
@@ -109,6 +106,9 @@ layout: default
             <article class="work-card reveal">
                 <div class="work-media">
                     <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt }}" loading="lazy" decoding="async">
+                    <div class="work-media-overlay">
+                        <a class="overlay-link" href="{{ project.url | relative_url }}">View case study →</a>
+                    </div>
                 </div>
                 <div class="work-body">
                     <div class="card-topline">
