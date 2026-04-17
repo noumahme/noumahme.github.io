@@ -803,6 +803,8 @@ ul {
 
 .focus-strip {
     position: relative;
+    padding-bottom: 5.75rem;
+    z-index: 1;
 }
 
 .focus-strip-head {
@@ -820,7 +822,8 @@ ul {
 .focus-strip-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 1.2rem;
+    align-items: start;
 }
 
 .focus-card {
@@ -834,6 +837,7 @@ ul {
         radial-gradient(circle at top right, rgba(86, 209, 194, 0.16), transparent 12rem),
         linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.52));
     box-shadow: var(--shadow-sm);
+    isolation: isolate;
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
@@ -1046,13 +1050,6 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-.section-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.1rem;
-}
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1258,10 +1255,6 @@ ul {
 .timeline-card {
     padding: 1.35rem 1.4rem;
     border-radius: var(--radius-lg);
-}
-
-.timeline-card-footer {
-    margin-top: 1rem;
 }
 
 .timeline-card h3 {

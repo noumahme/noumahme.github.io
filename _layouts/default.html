@@ -35,8 +35,8 @@
 
             <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
                 <a href="{{ '/' | relative_url }}#about">About</a>
-                <a href="{{ '/projects/' | relative_url }}"{% if page.nav_section == 'projects' %} class="is-active"{% endif %}>Projects</a>
-                <a href="{{ '/experience/' | relative_url }}"{% if page.nav_section == 'experience' %} class="is-active"{% endif %}>Experience</a>
+                <a href="{{ '/' | relative_url }}#work"{% if page.nav_section == 'projects' %} class="is-active"{% endif %}>Projects</a>
+                <a href="{{ '/' | relative_url }}#experience">Experience</a>
                 <a href="{{ '/' | relative_url }}#skills">Skills</a>
                 <a href="{{ '/' | relative_url }}#contact">Contact</a>
             </nav>
