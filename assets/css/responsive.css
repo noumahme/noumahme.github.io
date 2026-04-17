@@ -1,12 +1,18 @@
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1180px) {
     .hero-shell,
     .about-grid,
-    .metrics-grid,
-    .card-grid,
-    .skills-grid,
     .split-grid,
     .contact-shell {
         grid-template-columns: 1fr;
+    }
+
+    .focus-strip-grid,
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero-shell {
@@ -22,7 +28,24 @@
     }
 
     .about-proof {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .section-pad {
+        padding: 4.5rem 0;
+    }
+
+    .section-overlap {
+        margin-top: -3rem;
+    }
+
+    .focus-strip-grid,
+    .metrics-grid,
+    .card-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
     .timeline::before {
@@ -37,16 +60,6 @@
 
     .timeline-item::before {
         left: 0;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .section-pad {
-        padding: 4.5rem 0;
-    }
-
-    .section-overlap {
-        margin-top: -3rem;
     }
 
     .menu-toggle {
@@ -114,14 +127,15 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
     .container {
         width: min(calc(100% - 1.25rem), var(--container));
     }
 
     .hero-shell,
     .about-shell,
-    .contact-shell {
+    .contact-shell,
+    .skill-spotlight {
         padding: 1.4rem;
     }
 
@@ -162,7 +176,16 @@
         grid-template-columns: 1fr;
     }
 
-    .button {
+    .work-media {
+        min-height: 13rem;
+    }
+
+    .work-footer {
+        align-items: stretch;
+    }
+
+    .button,
+    .detail-toggle {
         width: 100%;
     }
 }
@@ -180,8 +203,30 @@
         min-height: 4.7rem;
     }
 
+    .brand-text {
+        font-size: 0.94rem;
+    }
+
     .hero-meta {
         display: grid;
+    }
+
+    .focus-card,
+    .metric-card,
+    .timeline-card,
+    .skill-group,
+    .info-card {
+        padding: 1.25rem;
+    }
+
+    .work-body {
+        padding: 1.25rem;
+    }
+
+    .card-metric {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 
     .footer-inner {

@@ -18,6 +18,7 @@
     <div class="page-noise"></div>
     <div class="page-glow page-glow-a"></div>
     <div class="page-glow page-glow-b"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="top">
         <div class="container header-inner">
@@ -107,7 +108,7 @@
                     <div class="hero-visual">
                         <div class="portrait-shell">
                             <div class="portrait-frame">
-                                <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed">
+                                <img src="assets/images/about/profile_image.jpg" alt="Portrait of Nouman Ahmed" loading="eager" decoding="async">
                             </div>
                             <div class="portrait-badge">
                                 <span class="portrait-badge-label">Current toolkit</span>
@@ -127,6 +128,35 @@
                             <p>Angular and ASP.NET modernization, WebSocket chat, and LLM-powered recommendation systems.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="focus-strip section-gap" aria-labelledby="focus-title">
+            <div class="container">
+                <div class="focus-strip-head reveal">
+                    <p class="eyebrow">What Shapes My Work</p>
+                    <h2 id="focus-title">The goal is simple: make product value, technical range, and delivery style obvious at a glance.</h2>
+                </div>
+
+                <div class="focus-strip-grid">
+                    <article class="focus-card reveal">
+                        <span class="focus-index">01</span>
+                        <h3>Product engineering with measurable movement</h3>
+                        <p>I like shipping systems where performance gains, user adoption, and release quality are visible in the outcome, not just the implementation.</p>
+                    </article>
+
+                    <article class="focus-card reveal">
+                        <span class="focus-index">02</span>
+                        <h3>Applied AI that fits a real product surface</h3>
+                        <p>Research and model knowledge matter most when they improve an actual workflow, recommendation flow, or decision that users already care about.</p>
+                    </article>
+
+                    <article class="focus-card reveal">
+                        <span class="focus-index">03</span>
+                        <h3>Clear collaboration across code, teams, and teaching</h3>
+                        <p>Mentoring, stakeholder communication, and documentation are part of the engineering job when the goal is reliable delivery rather than isolated code output.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -257,51 +287,143 @@
 
                 <div class="card-grid">
                     <article class="work-card reveal">
-                        <div class="card-topline">
-                            <span>Product Engineering</span>
-                            <span>Full Stack</span>
+                        <div class="work-media">
+                            <img src="assets/images/portfolio/p1.jpg" alt="Preview image representing a high-traffic e-commerce platform" loading="lazy" decoding="async">
                         </div>
-                        <h3>High-traffic e-commerce platform</h3>
-                        <p>
-                            Engineered a commerce platform using React, Spring Boot, and Kubernetes, improving engagement and transaction speed while supporting heavier traffic.
-                        </p>
-                        <div class="card-metric">40% more engagement | 30% faster transactions</div>
+                        <div class="work-body">
+                            <div class="card-topline">
+                                <span>Product Engineering</span>
+                                <span>Full Stack</span>
+                            </div>
+                            <h3>High-traffic e-commerce platform</h3>
+                            <p>
+                                Engineered a commerce platform using React, Spring Boot, and Kubernetes, improving engagement and transaction speed while supporting heavier traffic.
+                            </p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>React</li>
+                                <li>Spring Boot</li>
+                                <li>Kubernetes</li>
+                                <li>Microservices</li>
+                            </ul>
+                            <div class="work-footer">
+                                <div class="card-metric">40% more engagement | 30% faster transactions</div>
+                                <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-commerce" data-detail-label-open="Open details" data-detail-label-close="Hide details">
+                                    Open details
+                                </button>
+                            </div>
+                            <div class="work-details" id="work-detail-commerce" hidden>
+                                <ul class="detail-list detail-list-compact">
+                                    <li>Supported heavier traffic with scalable backend services and cleaner deployment orchestration.</li>
+                                    <li>Improved the customer experience through faster transactions and a more responsive interface.</li>
+                                    <li>Worked at the intersection of product delivery, platform reliability, and measurable performance.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="card-topline">
-                            <span>Enterprise App</span>
-                            <span>Internal Tools</span>
+                        <div class="work-media">
+                            <img src="assets/images/portfolio/p2.jpg" alt="Preview image representing an enterprise workflow application" loading="lazy" decoding="async">
                         </div>
-                        <h3>Steel analysis modernization platform</h3>
-                        <p>
-                            Replaced spreadsheet-heavy steel analysis workflows with an Angular and ASP.NET Core application that reduced manual work and improved adoption.
-                        </p>
-                        <div class="card-metric">40% less manual work | 35% faster responses</div>
+                        <div class="work-body">
+                            <div class="card-topline">
+                                <span>Enterprise App</span>
+                                <span>Internal Tools</span>
+                            </div>
+                            <h3>Steel analysis modernization platform</h3>
+                            <p>
+                                Replaced spreadsheet-heavy steel analysis workflows with an Angular and ASP.NET Core application that reduced manual work and improved adoption.
+                            </p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>Angular</li>
+                                <li>ASP.NET Core</li>
+                                <li>SQL Server</li>
+                                <li>Workflow Design</li>
+                            </ul>
+                            <div class="work-footer">
+                                <div class="card-metric">40% less manual work | 35% faster responses</div>
+                                <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-enterprise" data-detail-label-open="Open details" data-detail-label-close="Hide details">
+                                    Open details
+                                </button>
+                            </div>
+                            <div class="work-details" id="work-detail-enterprise" hidden>
+                                <ul class="detail-list detail-list-compact">
+                                    <li>Moved teams away from spreadsheet-heavy processes toward a dependable web workflow.</li>
+                                    <li>Improved onboarding by giving users a clearer interface and more consistent data flow.</li>
+                                    <li>Translated stakeholder feedback into weekly progress and visible product improvements.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="card-topline">
-                            <span>AI Applications</span>
-                            <span>OpenAI API</span>
+                        <div class="work-media">
+                            <img src="assets/images/portfolio/p3.jpg" alt="Preview image representing an AI-powered recommendation system" loading="lazy" decoding="async">
                         </div>
-                        <h3>LLM-based AI recommender system</h3>
-                        <p>
-                            Built an LLM-powered recommender in Python with OpenAI API and PostgreSQL, improving engagement and accuracy while accelerating query performance.
-                        </p>
-                        <div class="card-metric">35% stronger engagement and accuracy | 30% faster queries</div>
+                        <div class="work-body">
+                            <div class="card-topline">
+                                <span>AI Applications</span>
+                                <span>OpenAI API</span>
+                            </div>
+                            <h3>LLM-based AI recommender system</h3>
+                            <p>
+                                Built an LLM-powered recommender in Python with OpenAI API and PostgreSQL, improving engagement and accuracy while accelerating query performance.
+                            </p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>Python</li>
+                                <li>OpenAI API</li>
+                                <li>PostgreSQL</li>
+                                <li>Prompt Design</li>
+                            </ul>
+                            <div class="work-footer">
+                                <div class="card-metric">35% stronger engagement and accuracy | 30% faster queries</div>
+                                <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-ai" data-detail-label-open="Open details" data-detail-label-close="Hide details">
+                                    Open details
+                                </button>
+                            </div>
+                            <div class="work-details" id="work-detail-ai" hidden>
+                                <ul class="detail-list detail-list-compact">
+                                    <li>Combined language model behavior with structured data to improve recommendation quality.</li>
+                                    <li>Focused on practical latency and query improvements instead of treating the model as a demo feature.</li>
+                                    <li>Used experimentation to balance accuracy, speed, and usability for real engagement gains.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
 
                     <article class="work-card reveal">
-                        <div class="card-topline">
-                            <span>Real-Time Systems</span>
-                            <span>Full Stack</span>
+                        <div class="work-media">
+                            <img src="assets/images/portfolio/p4.jpg" alt="Preview image representing a real-time messaging application" loading="lazy" decoding="async">
                         </div>
-                        <h3>Real-time chat application</h3>
-                        <p>
-                            Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL for instant messaging, status updates, and faster data retrieval.
-                        </p>
-                        <div class="card-metric">50% lower latency | 30% faster message retrieval</div>
+                        <div class="work-body">
+                            <div class="card-topline">
+                                <span>Real-Time Systems</span>
+                                <span>Full Stack</span>
+                            </div>
+                            <h3>Real-time chat application</h3>
+                            <p>
+                                Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL for instant messaging, status updates, and faster data retrieval.
+                            </p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>Angular</li>
+                                <li>Spring Boot</li>
+                                <li>WebSocket</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <div class="work-footer">
+                                <div class="card-metric">50% lower latency | 30% faster message retrieval</div>
+                                <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="work-detail-chat" data-detail-label-open="Open details" data-detail-label-close="Hide details">
+                                    Open details
+                                </button>
+                            </div>
+                            <div class="work-details" id="work-detail-chat" hidden>
+                                <ul class="detail-list detail-list-compact">
+                                    <li>Optimized the system for lower message latency and faster retrieval under active usage.</li>
+                                    <li>Built around real-time presence, status handling, and dependable server-client communication.</li>
+                                    <li>Used full-stack coordination so the interface and backend stayed responsive together.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -356,6 +478,66 @@
                 <div class="section-head reveal">
                     <p class="eyebrow">Skills</p>
                     <h2>Technical range grounded in full-stack engineering with an AI edge.</h2>
+                </div>
+
+                <div class="skill-spotlight reveal">
+                    <div class="switcher switcher-skill" data-switcher>
+                        <div class="switcher-tabs" role="tablist" aria-label="Core technical strengths">
+                            <button class="switcher-button is-active" type="button" role="tab" aria-selected="true" data-switcher-target="product-stack">Product stack</button>
+                            <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="ai-workflow">AI workflow</button>
+                            <button class="switcher-button" type="button" role="tab" aria-selected="false" data-switcher-target="platform-delivery">Platform delivery</button>
+                        </div>
+
+                        <div class="switcher-panels">
+                            <article class="switcher-panel is-active" data-switcher-panel="product-stack">
+                                <p class="switcher-kicker">Where I spend most of my time</p>
+                                <h3>Designing and shipping product-facing applications from UI to backend services.</h3>
+                                <p>
+                                    My strongest work usually combines interface quality, dependable APIs, and clean delivery workflows rather than treating each layer in isolation.
+                                </p>
+                                <ul class="chip-list chip-list-strong">
+                                    <li>React</li>
+                                    <li>Angular</li>
+                                    <li>Spring Boot</li>
+                                    <li>.NET Core</li>
+                                    <li>REST APIs</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </article>
+
+                            <article class="switcher-panel" data-switcher-panel="ai-workflow" hidden>
+                                <p class="switcher-kicker">Applied intelligence</p>
+                                <h3>I use machine learning and LLM systems where they improve a concrete user workflow.</h3>
+                                <p>
+                                    Research background helps, but the real value comes from shaping prompts, data flow, latency, and evaluation around an actual product need.
+                                </p>
+                                <ul class="chip-list chip-list-strong">
+                                    <li>OpenAI API</li>
+                                    <li>Python</li>
+                                    <li>Transformers</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Prompt Design</li>
+                                    <li>Evaluation</li>
+                                </ul>
+                            </article>
+
+                            <article class="switcher-panel" data-switcher-panel="platform-delivery" hidden>
+                                <p class="switcher-kicker">Reliability and scale</p>
+                                <h3>I care about the infrastructure and automation that let good software stay good under real usage.</h3>
+                                <p>
+                                    That includes containerized deployment, cloud services, release pipelines, and architecture choices that support future growth instead of blocking it.
+                                </p>
+                                <ul class="chip-list chip-list-strong">
+                                    <li>Docker</li>
+                                    <li>Kubernetes</li>
+                                    <li>Jenkins</li>
+                                    <li>AWS</li>
+                                    <li>Azure</li>
+                                    <li>Terraform</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="skills-grid">

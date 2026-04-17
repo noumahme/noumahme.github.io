@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
     const header = document.querySelector(".site-header");
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
@@ -6,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const metricValues = document.querySelectorAll("[data-count]");
     const heroShell = document.querySelector(".hero-shell");
     const switchers = document.querySelectorAll("[data-switcher]");
+    const scrollProgress = document.querySelector(".scroll-progress span");
+    const detailToggles = Array.from(document.querySelectorAll(".detail-toggle"));
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const desktopNavBreakpoint = window.matchMedia("(min-width: 961px)");
 
     const closeMenu = () => {
         if (!header || !menuToggle) {
@@ -13,35 +18,71 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         header.classList.remove("menu-open");
+        body.classList.remove("menu-open");
         menuToggle.setAttribute("aria-expanded", "false");
     };
 
     if (menuToggle && header) {
         menuToggle.addEventListener("click", () => {
             const isOpen = header.classList.toggle("menu-open");
+            body.classList.toggle("menu-open", isOpen);
             menuToggle.setAttribute("aria-expanded", String(isOpen));
         });
 
         navLinks.forEach((link) => {
             link.addEventListener("click", closeMenu);
         });
+
+        document.addEventListener("click", (event) => {
+            if (!header.classList.contains("menu-open")) {
+                return;
+            }
+
+            if (header.contains(event.target)) {
+                return;
+            }
+
+            closeMenu();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        const syncMenuForDesktop = (event) => {
+            if (event.matches) {
+                closeMenu();
+            }
+        };
+
+        if (typeof desktopNavBreakpoint.addEventListener === "function") {
+            desktopNavBreakpoint.addEventListener("change", syncMenuForDesktop);
+        } else if (typeof desktopNavBreakpoint.addListener === "function") {
+            desktopNavBreakpoint.addListener(syncMenuForDesktop);
+        }
     }
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
+    if (prefersReducedMotion.matches) {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+    } else {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        },
-        { threshold: 0.16 }
-    );
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            },
+            { threshold: 0.16 }
+        );
 
-    revealItems.forEach((item) => revealObserver.observe(item));
+        revealItems.forEach((item) => revealObserver.observe(item));
+    }
 
     const sectionObserver = new IntersectionObserver(
         (entries) => {
@@ -91,6 +132,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const setDetailState = (button, panel, isExpanded) => {
+        const openLabel = button.dataset.detailLabelOpen || "Open details";
+        const closeLabel = button.dataset.detailLabelClose || "Hide details";
+
+        button.setAttribute("aria-expanded", String(isExpanded));
+        button.textContent = isExpanded ? closeLabel : openLabel;
+        panel.hidden = !isExpanded;
+    };
+
+    detailToggles.forEach((button) => {
+        const panelId = button.getAttribute("aria-controls");
+        const panel = panelId ? document.getElementById(panelId) : null;
+
+        if (!panel) {
+            return;
+        }
+
+        setDetailState(button, panel, false);
+
+        button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+            detailToggles.forEach((otherButton) => {
+                if (otherButton === button) {
+                    return;
+                }
+
+                const otherPanelId = otherButton.getAttribute("aria-controls");
+                const otherPanel = otherPanelId ? document.getElementById(otherPanelId) : null;
+
+                if (otherPanel) {
+                    setDetailState(otherButton, otherPanel, false);
+                }
+            });
+
+            setDetailState(button, panel, !isExpanded);
+        });
+    });
+
     const animateCount = (element) => {
         const target = Number(element.dataset.count);
         const suffix = element.dataset.suffix || "";
@@ -113,27 +193,62 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(update);
     };
 
-    const metricObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
+    if (prefersReducedMotion.matches) {
+        metricValues.forEach((metric) => {
+            const suffix = metric.dataset.suffix || "";
+            metric.textContent = `${Number(metric.dataset.count).toLocaleString()}${suffix}`;
+        });
+    } else {
+        const metricObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
-                animateCount(entry.target);
-                observer.unobserve(entry.target);
-            });
-        },
-        { threshold: 0.55 }
-    );
+                    animateCount(entry.target);
+                    observer.unobserve(entry.target);
+                });
+            },
+            { threshold: 0.55 }
+        );
 
-    metricValues.forEach((metric) => {
-        const suffix = metric.dataset.suffix || "";
-        metric.textContent = `0${suffix}`;
-        metricObserver.observe(metric);
-    });
+        metricValues.forEach((metric) => {
+            const suffix = metric.dataset.suffix || "";
+            metric.textContent = `0${suffix}`;
+            metricObserver.observe(metric);
+        });
+    }
 
-    if (heroShell && window.matchMedia("(pointer:fine)").matches) {
+    const updateScrollProgress = () => {
+        if (!scrollProgress) {
+            return;
+        }
+
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+
+        scrollProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+    };
+
+    let scrollTicking = false;
+    const requestScrollProgressUpdate = () => {
+        if (scrollTicking) {
+            return;
+        }
+
+        scrollTicking = true;
+        window.requestAnimationFrame(() => {
+            updateScrollProgress();
+            scrollTicking = false;
+        });
+    };
+
+    updateScrollProgress();
+    window.addEventListener("scroll", requestScrollProgressUpdate, { passive: true });
+    window.addEventListener("resize", updateScrollProgress);
+
+    if (heroShell && !prefersReducedMotion.matches && window.matchMedia("(pointer:fine)").matches) {
         heroShell.addEventListener("pointermove", (event) => {
             const bounds = heroShell.getBoundingClientRect();
             const x = ((event.clientX - bounds.left) / bounds.width) * 100;
