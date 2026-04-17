@@ -1,17 +1,21 @@
 @media screen and (max-width: 1180px) {
     .hero-shell,
+    .page-hero-shell,
     .about-grid,
+    .detail-split-grid,
     .split-grid,
     .contact-shell {
         grid-template-columns: 1fr;
     }
 
     .focus-strip-grid,
-    .card-grid {
+    .card-grid,
+    .detail-content-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .metrics-grid {
+    .metrics-grid,
+    .detail-metrics-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -43,8 +47,11 @@
 
     .focus-strip-grid,
     .metrics-grid,
+    .detail-metrics-grid,
     .card-grid,
-    .skills-grid {
+    .skills-grid,
+    .detail-content-grid,
+    .detail-split-grid {
         grid-template-columns: 1fr;
     }
 
@@ -110,7 +117,8 @@
         padding-top: 3rem;
     }
 
-    .hero-shell {
+    .hero-shell,
+    .page-hero-shell {
         padding: 2rem;
     }
 
@@ -133,9 +141,11 @@
     }
 
     .hero-shell,
+    .page-hero-shell,
     .about-shell,
     .contact-shell,
-    .skill-spotlight {
+    .skill-spotlight,
+    .detail-card {
         padding: 1.4rem;
     }
 
@@ -184,6 +194,14 @@
         align-items: stretch;
     }
 
+    .work-actions {
+        width: 100%;
+    }
+
+    .page-hero-media {
+        min-height: 18rem;
+    }
+
     .button,
     .detail-toggle {
         width: 100%;
@@ -221,6 +239,10 @@
 
     .work-body {
         padding: 1.25rem;
+    }
+
+    .page-summary {
+        font-size: 1rem;
     }
 
     .card-metric {

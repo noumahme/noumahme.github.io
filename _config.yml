@@ -1,0 +1,6 @@
+title: Nouman Ahmed
+description: Portfolio website for Nouman Ahmed, a PhD researcher and software developer building practical machine learning systems, scalable applications, and AI-powered products.
+plugins:
+  - jekyll-redirect-from
+exclude:
+  - README.md

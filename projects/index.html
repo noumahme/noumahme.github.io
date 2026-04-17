@@ -1,0 +1,98 @@
+---
+layout: default
+title: Case Studies
+description: Case studies covering product engineering, enterprise applications, applied AI, and real-time systems work by Nouman Ahmed.
+nav_section: projects
+redirect_from:
+  - /work/
+---
+{% assign project_pages = site.pages | where: "layout", "project" | sort: "order" %}
+<section class="page-hero section-pad">
+    <div class="container">
+        <div class="page-hero-shell reveal">
+            <div class="page-hero-copy">
+                <a class="page-breadcrumb" href="{{ '/' | relative_url }}">Back to home</a>
+                <p class="eyebrow">Projects</p>
+                <h1>Case studies for the work behind the portfolio highlights.</h1>
+                <p class="page-summary">
+                    These pages give the homepage projects a deeper destination on GitHub Pages: what the problem was, how the system was built, and what changed as a result.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="{{ '/' | relative_url }}#work">Return to selected work</a>
+                    <a class="button button-secondary" href="{{ '/' | relative_url }}#contact">Start a conversation</a>
+                </div>
+            </div>
+
+            <div class="page-hero-visual">
+                <div class="page-hero-media">
+                    <img src="{{ '/assets/images/about/welcome-banner.jpg' | relative_url }}" alt="Banner image representing software projects and research work" loading="eager" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-overlap">
+    <div class="container">
+        <div class="detail-metrics-grid">
+            <article class="metric-card reveal">
+                <p class="metric-value">4</p>
+                <p class="metric-label">case studies expanded into dedicated project pages</p>
+            </article>
+            <article class="metric-card reveal">
+                <p class="metric-value">40%</p>
+                <p class="metric-label">engagement lift on a production commerce platform</p>
+            </article>
+            <article class="metric-card reveal">
+                <p class="metric-value">50%</p>
+                <p class="metric-label">lower latency in a real-time messaging application</p>
+            </article>
+            <article class="metric-card reveal">
+                <p class="metric-value">AI + Full Stack</p>
+                <p class="metric-label">range across applied intelligence, internal tools, and product systems</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="section-head reveal">
+            <p class="eyebrow">Browse Projects</p>
+            <h2>Each card now leads to its own GitHub Pages destination.</h2>
+            <p>
+                The homepage keeps the quick scan. These pages provide a stronger redirect target with fuller project context, stack details, and outcomes.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            {% for project in project_pages %}
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt }}" loading="lazy" decoding="async">
+                </div>
+                <div class="work-body">
+                    <div class="card-topline">
+                        {% for tag in project.project_tags limit:2 %}
+                        <span>{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.summary }}</p>
+                    <ul class="work-stack" aria-label="Technologies used">
+                        {% for item in project.stack limit:4 %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="work-footer">
+                        <div class="card-metric">{{ project.metrics[0].value }} {{ project.metrics[0].label }}</div>
+                        <div class="work-actions">
+                            <a class="button button-secondary button-compact" href="{{ project.url | relative_url }}">Open case study</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

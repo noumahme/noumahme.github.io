@@ -1,0 +1,93 @@
+---
+layout: default
+---
+<section class="page-hero section-pad">
+    <div class="container">
+        <div class="page-hero-shell reveal">
+            <div class="page-hero-copy">
+                <a class="page-breadcrumb" href="{{ '/projects/' | relative_url }}">All case studies</a>
+                <p class="eyebrow">{{ page.eyebrow }}</p>
+                <h1>{{ page.title }}</h1>
+                <p class="page-summary">{{ page.summary }}</p>
+
+                {% if page.project_tags %}
+                <ul class="chip-list page-tags" aria-label="Project categories">
+                    {% for item in page.project_tags %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="{{ '/projects/' | relative_url }}">Back to case studies</a>
+                    <a class="button button-secondary" href="{{ '/' | relative_url }}#contact">Discuss similar work</a>
+                </div>
+            </div>
+
+            <div class="page-hero-visual">
+                <div class="page-hero-media">
+                    <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" loading="eager" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-overlap">
+    <div class="container">
+        <div class="detail-metrics-grid">
+            {% for metric in page.metrics %}
+            <article class="metric-card reveal">
+                <p class="metric-value">{{ metric.value }}</p>
+                <p class="metric-label">{{ metric.label }}</p>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad">
+    <div class="container">
+        <div class="detail-content-grid">
+            <article class="detail-card reveal">
+                <p class="eyebrow">Challenge</p>
+                <h2>What needed to change</h2>
+                <p>{{ page.challenge }}</p>
+            </article>
+
+            <article class="detail-card reveal">
+                <p class="eyebrow">Build</p>
+                <h2>How I approached it</h2>
+                <p>{{ page.build }}</p>
+            </article>
+
+            <article class="detail-card reveal">
+                <p class="eyebrow">Outcome</p>
+                <h2>What improved</h2>
+                <p>{{ page.outcome }}</p>
+            </article>
+        </div>
+
+        <div class="detail-split-grid">
+            <article class="detail-card reveal">
+                <p class="eyebrow">Highlights</p>
+                <h2>What shaped the result</h2>
+                <ul class="detail-list">
+                    {% for item in page.highlights %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+
+            <article class="detail-card reveal">
+                <p class="eyebrow">Technology</p>
+                <h2>Stack used on the project</h2>
+                <ul class="chip-list chip-list-strong">
+                    {% for item in page.stack %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
