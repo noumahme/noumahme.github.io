@@ -2,7 +2,8 @@
     .hero-grid,
     .page-hero-grid,
     .split-grid,
-    .contact-shell {
+    .contact-shell,
+    .work-feature-card {
         grid-template-columns: 1fr;
     }
 
@@ -13,6 +14,14 @@
     .hero-side,
     .page-hero-side {
         max-width: 34rem;
+    }
+
+    .work-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .work-note {
+        max-width: 24rem;
     }
 }
 
@@ -28,7 +37,9 @@
     .timeline,
     .skills-grid,
     .detail-content-grid,
-    .detail-split-grid {
+    .detail-split-grid,
+    .work-support-grid,
+    .feature-highlights {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -99,7 +110,9 @@
     .timeline,
     .skills-grid,
     .detail-content-grid,
-    .detail-split-grid {
+    .detail-split-grid,
+    .work-support-grid,
+    .feature-highlights {
         grid-template-columns: 1fr;
     }
 
@@ -118,6 +131,10 @@
     }
 
     .page-hero-media {
+        min-height: 18rem;
+    }
+
+    .work-feature-media {
         min-height: 18rem;
     }
 
@@ -145,7 +162,9 @@
     .skill-group,
     .info-card,
     .detail-card,
-    .contact-shell {
+    .contact-shell,
+    .work-feature-card,
+    .work-note {
         padding: 1.2rem;
     }
 

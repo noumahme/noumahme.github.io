@@ -2,6 +2,7 @@
     --page: #f7faf8;
     --surface: #ffffff;
     --surface-soft: #f0f5f2;
+    --surface-muted: #f7fbf8;
     --surface-strong: #fdfefe;
     --ink: #1f2a24;
     --ink-soft: #5e6a63;
@@ -37,8 +38,9 @@ body {
     font-family: var(--font-main);
     line-height: 1.7;
     background:
-        radial-gradient(circle at top right, rgba(47, 111, 104, 0.06), transparent 28rem),
-        linear-gradient(180deg, #fbfdfc 0%, var(--page) 100%);
+        radial-gradient(circle at top right, rgba(47, 111, 104, 0.08), transparent 28rem),
+        radial-gradient(circle at 0% 20%, rgba(47, 111, 104, 0.04), transparent 22rem),
+        linear-gradient(180deg, #fcfffd 0%, var(--page) 52%, #f1f6f3 100%);
     overflow-x: hidden;
 }
 
@@ -177,7 +179,7 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.86);
-    box-shadow: 0 16px 36px rgba(26, 39, 32, 0.08);
+    box-shadow: 0 18px 40px rgba(26, 39, 32, 0.08);
     backdrop-filter: blur(16px);
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
@@ -277,6 +279,11 @@ ul {
     grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
     gap: 1.2rem;
     align-items: start;
+    padding: 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 251, 248, 0.94));
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-copy,
@@ -285,6 +292,11 @@ ul {
 .page-hero-side {
     display: grid;
     gap: 1rem;
+}
+
+.hero-copy,
+.page-hero-copy {
+    padding: 0.35rem;
 }
 
 .hero-copy h1,
@@ -376,6 +388,7 @@ ul {
     border-radius: var(--radius-lg);
     background: var(--surface);
     box-shadow: var(--shadow-sm);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .portrait-card,
@@ -384,6 +397,18 @@ ul {
     border-radius: var(--radius-lg);
     background: var(--surface);
     box-shadow: var(--shadow-md);
+}
+
+.info-panel:hover,
+.metric-card:hover,
+.work-card:hover,
+.timeline-card:hover,
+.skill-group:hover,
+.info-card:hover,
+.detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--line-strong);
 }
 
 .portrait-card img,
@@ -403,6 +428,7 @@ ul {
 
 .summary-card {
     overflow: hidden;
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
 }
 
 .summary-row {
@@ -424,6 +450,10 @@ ul {
 .section-head {
     max-width: 48rem;
     margin-bottom: 1.5rem;
+}
+
+.section-head-tight {
+    margin-bottom: 0;
 }
 
 .section-head-left {
@@ -451,6 +481,17 @@ ul {
 .info-card p,
 .detail-card p {
     color: var(--ink-soft);
+}
+
+.section-head::after {
+    content: "";
+    display: block;
+    width: 4.5rem;
+    height: 3px;
+    margin-top: 1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    opacity: 0.16;
 }
 
 .overview-grid,
@@ -513,6 +554,144 @@ ul {
     padding: 1.45rem;
 }
 
+.work-showcase {
+    display: grid;
+    gap: 1rem;
+}
+
+.work-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 19rem;
+    gap: 1rem;
+    align-items: end;
+}
+
+.work-note {
+    padding: 1.2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-soft) 100%);
+    box-shadow: var(--shadow-sm);
+}
+
+.project-note-list {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 0.75rem;
+    list-style: none;
+}
+
+.project-note-list li {
+    position: relative;
+    padding-left: 1rem;
+    color: var(--ink-soft);
+}
+
+.project-note-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.72rem;
+    left: 0;
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.work-feature-card {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.96fr) minmax(0, 1.04fr);
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius-lg) + 2px);
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
+    box-shadow: var(--shadow-md);
+}
+
+.work-feature-media {
+    position: relative;
+    display: block;
+    min-height: 24rem;
+    overflow: hidden;
+    border-radius: calc(var(--radius-lg) - 2px);
+}
+
+.work-feature-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.work-feature-card:hover .work-feature-media img {
+    transform: scale(1.03);
+}
+
+.work-media-badge {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.1rem;
+    padding: 0.34rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--ink);
+    font-size: 0.84rem;
+    font-weight: 800;
+    box-shadow: var(--shadow-sm);
+}
+
+.work-media-badge-feature {
+    background: var(--accent);
+    color: #f7fffe;
+}
+
+.work-feature-copy {
+    display: grid;
+    gap: 1rem;
+    padding: 0.25rem 0.15rem;
+}
+
+.work-feature-card h3 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--ink);
+}
+
+.work-feature-summary {
+    max-width: 40rem;
+    font-size: 1.03rem;
+    color: var(--ink-soft);
+}
+
+.feature-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.feature-highlight {
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.feature-highlight strong {
+    display: block;
+    margin-top: 0.28rem;
+    line-height: 1.45;
+    color: var(--ink);
+}
+
+.work-support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
 .metric-value {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
@@ -532,10 +711,15 @@ ul {
     overflow: hidden;
 }
 
+.work-card-secondary {
+    min-height: 100%;
+}
+
 .work-media {
     display: block;
     min-height: 15rem;
     overflow: hidden;
+    background: var(--surface-soft);
 }
 
 .work-media img {
@@ -657,10 +841,12 @@ ul {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.5rem;
     align-items: center;
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface-soft) 100%);
 }
 
 .site-footer {
     padding: 0 0 2.4rem;
+    border-top: 1px solid rgba(219, 229, 223, 0.9);
 }
 
 .footer-inner {

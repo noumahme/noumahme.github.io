@@ -146,108 +146,144 @@
 
         <section class="work section-pad" id="work">
             <div class="container">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Selected Projects</p>
-                    <h2>These projects show the kind of engineering work I do best.</h2>
-                    <p>Each one has a separate case-study page with the challenge, build decisions, results, and stack.</p>
-                </div>
+                <div class="work-showcase">
+                    <div class="work-intro reveal">
+                        <div class="section-head section-head-tight">
+                            <p class="eyebrow">Selected Projects</p>
+                            <h2>These projects show the kind of engineering work I do best.</h2>
+                            <p>
+                                The mix is intentional: product engineering, applied AI, workflow modernization, and real-time systems. Together they show how I approach software that has to be useful, reliable, and measurable.
+                            </p>
+                        </div>
 
-                <div class="card-grid">
-                    <article class="work-card reveal">
-                        <a class="work-media" href="projects/ecommerce-platform/" aria-label="Open case study for the high-traffic e-commerce platform">
+                        <aside class="work-note">
+                            <p class="panel-label">What to notice</p>
+                            <ul class="project-note-list">
+                                <li>Product work tied to visible outcomes</li>
+                                <li>AI used inside a real workflow</li>
+                                <li>Systems built for production use, not demos</li>
+                            </ul>
+                        </aside>
+                    </div>
+
+                    <article class="work-feature-card reveal">
+                        <a class="work-feature-media" href="projects/ecommerce-platform/" aria-label="Open case study for the high-traffic e-commerce platform">
                             <img src="assets/images/portfolio/p1.jpg" alt="Preview image representing a high-traffic e-commerce platform" loading="lazy" decoding="async">
+                            <span class="work-media-badge work-media-badge-feature">Featured case study</span>
                         </a>
-                        <div class="work-body">
+
+                        <div class="work-feature-copy">
                             <div class="card-topline">
                                 <span>Product Engineering</span>
                                 <span>Full Stack</span>
                             </div>
                             <h3>High-traffic e-commerce platform</h3>
-                            <p>Built a commerce platform with React, Spring Boot, and Kubernetes to improve customer engagement, transaction speed, and production resilience.</p>
+                            <p class="work-feature-summary">
+                                Built a commerce platform with React, Spring Boot, and Kubernetes to improve customer engagement, transaction speed, and production resilience under heavier traffic.
+                            </p>
+
+                            <div class="feature-highlights">
+                                <div class="feature-highlight">
+                                    <span class="summary-label">Impact</span>
+                                    <strong>40% more engagement</strong>
+                                </div>
+                                <div class="feature-highlight">
+                                    <span class="summary-label">Performance</span>
+                                    <strong>30% faster transactions</strong>
+                                </div>
+                                <div class="feature-highlight">
+                                    <span class="summary-label">Approach</span>
+                                    <strong>React, Spring Boot, Kubernetes, and microservices</strong>
+                                </div>
+                            </div>
+
                             <ul class="work-stack" aria-label="Technologies used">
                                 <li>React</li>
                                 <li>Spring Boot</li>
                                 <li>Kubernetes</li>
                                 <li>Microservices</li>
                             </ul>
+
                             <div class="work-footer">
-                                <div class="card-metric">40% more engagement and 30% faster transactions</div>
-                                <a class="button button-secondary button-compact" href="projects/ecommerce-platform/">Read case study</a>
+                                <div class="card-metric">A strong example of product, backend, and platform work moving together</div>
+                                <a class="button button-primary button-compact" href="projects/ecommerce-platform/">Read case study</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="work-card reveal">
-                        <a class="work-media" href="projects/steel-analysis-platform/" aria-label="Open case study for the steel analysis modernization platform">
-                            <img src="assets/images/portfolio/p2.jpg" alt="Preview image representing an enterprise workflow application" loading="lazy" decoding="async">
-                        </a>
-                        <div class="work-body">
-                            <div class="card-topline">
-                                <span>Enterprise Application</span>
-                                <span>Workflow Modernization</span>
+                    <div class="work-support-grid">
+                        <article class="work-card work-card-secondary reveal">
+                            <a class="work-media" href="projects/steel-analysis-platform/" aria-label="Open case study for the steel analysis modernization platform">
+                                <img src="assets/images/portfolio/p2.jpg" alt="Preview image representing an enterprise workflow application" loading="lazy" decoding="async">
+                            </a>
+                            <div class="work-body">
+                                <div class="card-topline">
+                                    <span>Enterprise Application</span>
+                                    <span>Workflow Modernization</span>
+                                </div>
+                                <h3>Steel analysis modernization platform</h3>
+                                <p>Replaced spreadsheet-driven analysis work with an Angular and ASP.NET Core application that reduced manual effort and improved responsiveness.</p>
+                                <ul class="work-stack" aria-label="Technologies used">
+                                    <li>Angular</li>
+                                    <li>ASP.NET Core</li>
+                                    <li>SQL Server</li>
+                                    <li>Internal Tools</li>
+                                </ul>
+                                <div class="work-footer">
+                                    <div class="card-metric">40% less manual work and 35% faster responses</div>
+                                    <a class="button button-secondary button-compact" href="projects/steel-analysis-platform/">Read case study</a>
+                                </div>
                             </div>
-                            <h3>Steel analysis modernization platform</h3>
-                            <p>Replaced spreadsheet-driven analysis work with an Angular and ASP.NET Core application that reduced manual effort and improved responsiveness.</p>
-                            <ul class="work-stack" aria-label="Technologies used">
-                                <li>Angular</li>
-                                <li>ASP.NET Core</li>
-                                <li>SQL Server</li>
-                                <li>Internal Tools</li>
-                            </ul>
-                            <div class="work-footer">
-                                <div class="card-metric">40% less manual work and 35% faster responses</div>
-                                <a class="button button-secondary button-compact" href="projects/steel-analysis-platform/">Read case study</a>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="work-card reveal">
-                        <a class="work-media" href="projects/ai-recommender-system/" aria-label="Open case study for the LLM-based AI recommender system">
-                            <img src="assets/images/portfolio/p3.jpg" alt="Preview image representing an AI-powered recommendation system" loading="lazy" decoding="async">
-                        </a>
-                        <div class="work-body">
-                            <div class="card-topline">
-                                <span>Applied AI</span>
-                                <span>OpenAI API</span>
+                        <article class="work-card work-card-secondary reveal">
+                            <a class="work-media" href="projects/ai-recommender-system/" aria-label="Open case study for the LLM-based AI recommender system">
+                                <img src="assets/images/portfolio/p3.jpg" alt="Preview image representing an AI-powered recommendation system" loading="lazy" decoding="async">
+                            </a>
+                            <div class="work-body">
+                                <div class="card-topline">
+                                    <span>Applied AI</span>
+                                    <span>OpenAI API</span>
+                                </div>
+                                <h3>LLM-based AI recommender system</h3>
+                                <p>Built a recommendation workflow with Python, OpenAI API, and PostgreSQL to improve relevance, engagement, and query performance.</p>
+                                <ul class="work-stack" aria-label="Technologies used">
+                                    <li>Python</li>
+                                    <li>OpenAI API</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Evaluation</li>
+                                </ul>
+                                <div class="work-footer">
+                                    <div class="card-metric">35% stronger engagement and 30% faster queries</div>
+                                    <a class="button button-secondary button-compact" href="projects/ai-recommender-system/">Read case study</a>
+                                </div>
                             </div>
-                            <h3>LLM-based AI recommender system</h3>
-                            <p>Built a recommendation workflow with Python, OpenAI API, and PostgreSQL to improve relevance, engagement, and query performance.</p>
-                            <ul class="work-stack" aria-label="Technologies used">
-                                <li>Python</li>
-                                <li>OpenAI API</li>
-                                <li>PostgreSQL</li>
-                                <li>Evaluation</li>
-                            </ul>
-                            <div class="work-footer">
-                                <div class="card-metric">35% stronger engagement and 30% faster queries</div>
-                                <a class="button button-secondary button-compact" href="projects/ai-recommender-system/">Read case study</a>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="work-card reveal">
-                        <a class="work-media" href="projects/real-time-chat-application/" aria-label="Open case study for the real-time chat application">
-                            <img src="assets/images/portfolio/p4.jpg" alt="Preview image representing a real-time messaging application" loading="lazy" decoding="async">
-                        </a>
-                        <div class="work-body">
-                            <div class="card-topline">
-                                <span>Real-Time Systems</span>
-                                <span>Full Stack</span>
+                        <article class="work-card work-card-secondary reveal">
+                            <a class="work-media" href="projects/real-time-chat-application/" aria-label="Open case study for the real-time chat application">
+                                <img src="assets/images/portfolio/p4.jpg" alt="Preview image representing a real-time messaging application" loading="lazy" decoding="async">
+                            </a>
+                            <div class="work-body">
+                                <div class="card-topline">
+                                    <span>Real-Time Systems</span>
+                                    <span>Full Stack</span>
+                                </div>
+                                <h3>Real-time chat application</h3>
+                                <p>Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL to reduce latency and improve retrieval speed.</p>
+                                <ul class="work-stack" aria-label="Technologies used">
+                                    <li>Angular</li>
+                                    <li>Spring Boot</li>
+                                    <li>WebSocket</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <div class="work-footer">
+                                    <div class="card-metric">50% lower latency and 30% faster retrieval</div>
+                                    <a class="button button-secondary button-compact" href="projects/real-time-chat-application/">Read case study</a>
+                                </div>
                             </div>
-                            <h3>Real-time chat application</h3>
-                            <p>Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL to reduce latency and improve retrieval speed.</p>
-                            <ul class="work-stack" aria-label="Technologies used">
-                                <li>Angular</li>
-                                <li>Spring Boot</li>
-                                <li>WebSocket</li>
-                                <li>MySQL</li>
-                            </ul>
-                            <div class="work-footer">
-                                <div class="card-metric">50% lower latency and 30% faster retrieval</div>
-                                <a class="button button-secondary button-compact" href="projects/real-time-chat-application/">Read case study</a>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
