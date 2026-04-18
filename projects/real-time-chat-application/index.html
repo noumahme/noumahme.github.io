@@ -1,40 +1,259 @@
----
-layout: project
-title: Real-Time Chat Application
-description: Case study for a real-time chat application built with Angular, Spring Boot, WebSocket, and MySQL.
-nav_section: projects
-permalink: /projects/real-time-chat-application/
-order: 4
-eyebrow: Real-Time Systems | Full Stack
-summary: Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL for instant messaging, status updates, and faster message retrieval.
-hero_image: /assets/images/portfolio/p4.jpg
-hero_alt: Preview image representing a real-time messaging application
-project_tags:
-  - Real-Time Systems
-  - Full Stack
-  - Messaging Platform
-stack:
-  - Angular
-  - Spring Boot
-  - WebSocket
-  - MySQL
-  - Real-Time Presence
-metrics:
-  - value: 50%
-    label: lower latency in chat interactions
-  - value: 30%
-    label: faster message retrieval
-  - value: Real-Time
-    label: status and messaging flow built around live updates
-challenge: Messaging systems are only useful when they feel immediate and dependable. The core challenge was to reduce chat latency, keep status updates current, and make message retrieval fast enough that the application remained responsive during active use.
-build: I designed the application around Angular on the client, Spring Boot on the backend, WebSocket for real-time communication, and MySQL for persistence. The work focused on coordination between frontend behavior and backend delivery so live updates and message history felt fast together.
-outcome: The application delivered lower latency and faster retrieval while supporting the real-time expectations users bring to chat. It highlights the full-stack coordination required for responsive systems where interface timing and backend behavior must stay aligned.
-highlights:
-  - Optimized for real-time responsiveness rather than treating messaging as a standard request-response flow.
-  - Kept presence, status updates, and stored message history working together as one experience.
-  - Used WebSocket where live interaction mattered most instead of forcing everything through slower patterns.
-  - Focused on lower latency and retrieval speed because those changes are directly visible to users.
-redirect_from:
-  - /work/real-time-chat/
-  - /work/chat-application/
----
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Case study for a real-time chat application built with Angular, Spring Boot, WebSocket, and MySQL.">
+    <title>Real-Time Chat Application | Nouman Ahmed</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../../assets/logo/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body class="page-project">
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="../../" aria-label="Nouman Ahmed home">
+                <span class="brand-mark">NA</span>
+                <span class="brand-text">Nouman Ahmed</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <a href="../../#about">About</a>
+                <a href="../../#work" class="is-active">Projects</a>
+                <a href="../../#experience">Experience</a>
+                <a href="../../#skills">Skills</a>
+                <a href="../../#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero section-pad">
+            <div class="container">
+                <div class="page-hero-grid reveal">
+                    <div class="page-hero-copy">
+                        <a class="page-breadcrumb" href="../../#work">Back to portfolio</a>
+                        <p class="eyebrow">Real-Time Systems | Full Stack</p>
+                        <h1>Real-Time Chat Application</h1>
+                        <p class="page-summary">Designed a chat platform with Angular, Spring Boot, WebSocket, and MySQL for instant messaging, status updates, and faster message retrieval.</p>
+
+                        <ul class="page-tags" aria-label="Project categories">
+                            <li>Real-Time Systems</li>
+                            <li>Full Stack</li>
+                            <li>Messaging Platform</li>
+                        </ul>
+
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="../../#work">View all projects</a>
+                            <a class="button button-secondary" href="../../#contact">Discuss similar work</a>
+                        </div>
+                    </div>
+
+                    <div class="page-hero-side">
+                        <div class="page-hero-media">
+                            <img src="../../assets/images/portfolio/p4.jpg" alt="Preview image representing a real-time messaging application" loading="eager" decoding="async">
+                        </div>
+
+                        <div class="summary-card">
+                            <div class="summary-row">
+                                <span class="summary-label">Project type</span>
+                                <strong>Real-Time Systems, Full Stack, Messaging Platform</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Core stack</span>
+                                <strong>Angular, Spring Boot, WebSocket, MySQL</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Headline result</span>
+                                <strong>50% lower latency in chat interactions</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results section-gap">
+            <div class="container detail-metrics-grid">
+                <article class="metric-card reveal">
+                    <p class="metric-value">50%</p>
+                    <p class="metric-label">lower latency in chat interactions</p>
+                </article>
+                <article class="metric-card reveal">
+                    <p class="metric-value">30%</p>
+                    <p class="metric-label">faster message retrieval</p>
+                </article>
+                <article class="metric-card reveal">
+                    <p class="metric-value">Real-Time</p>
+                    <p class="metric-label">status and messaging flow built around live updates</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-pad">
+            <div class="container">
+                <div class="detail-content-grid">
+                    <article class="detail-card reveal">
+                        <p class="eyebrow">Problem</p>
+                        <h2>What needed to improve</h2>
+                        <p>Messaging systems are only useful when they feel immediate and dependable. The core challenge was to reduce chat latency, keep status updates current, and make message retrieval fast enough that the application remained responsive during active use.</p>
+                    </article>
+
+                    <article class="detail-card reveal">
+                        <p class="eyebrow">Approach</p>
+                        <h2>How I built it</h2>
+                        <p>I designed the application around Angular on the client, Spring Boot on the backend, WebSocket for real-time communication, and MySQL for persistence. The work focused on coordination between frontend behavior and backend delivery so live updates and message history felt fast together.</p>
+                    </article>
+
+                    <article class="detail-card reveal">
+                        <p class="eyebrow">Outcome</p>
+                        <h2>What changed</h2>
+                        <p>The application delivered lower latency and faster retrieval while supporting the real-time expectations users bring to chat. It highlights the full-stack coordination required for responsive systems where interface timing and backend behavior must stay aligned.</p>
+                    </article>
+                </div>
+
+                <div class="detail-split-grid">
+                    <article class="detail-card reveal">
+                        <p class="eyebrow">Highlights</p>
+                        <h2>Main points</h2>
+                        <ul class="detail-list">
+                            <li>Optimized for real-time responsiveness rather than treating messaging as a standard request-response flow.</li>
+                            <li>Kept presence, status updates, and stored message history working together as one experience.</li>
+                            <li>Used WebSocket where live interaction mattered most instead of forcing everything through slower patterns.</li>
+                            <li>Focused on lower latency and retrieval speed because those changes are directly visible to users.</li>
+                        </ul>
+                    </article>
+
+                    <article class="detail-card reveal">
+                        <p class="eyebrow">Technology</p>
+                        <h2>Stack used</h2>
+                        <ul class="chip-list">
+                            <li>Angular</li>
+                            <li>Spring Boot</li>
+                            <li>WebSocket</li>
+                            <li>MySQL</li>
+                            <li>Real-Time Presence</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-pad">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">More Projects</p>
+                    <h2>Other case studies from the portfolio.</h2>
+                    <p>These project pages follow the same visual system as the homepage, so the detail view stays consistent.</p>
+                </div>
+
+                <div class="project-list project-list-compact">
+                    <article class="project-row reveal">
+                        <a class="project-thumb" href="../ecommerce-platform/" aria-label="Open case study for the high-traffic e-commerce platform">
+                            <img src="../../assets/images/portfolio/p1.jpg" alt="Preview image representing a high-traffic e-commerce platform" loading="lazy" decoding="async">
+                        </a>
+                        <div class="project-copy">
+                            <div class="project-top">
+                                <span class="project-index">01</span>
+                                <div class="card-topline">
+                                    <span>Product Engineering</span>
+                                    <span>Full Stack</span>
+                                </div>
+                            </div>
+                            <h3>High-Traffic E-commerce Platform</h3>
+                            <p class="project-summary">Built a production commerce platform with React, Spring Boot, and Kubernetes, improving user engagement and transaction performance while supporting heavier traffic.</p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>React</li>
+                                <li>Spring Boot</li>
+                                <li>Kubernetes</li>
+                                <li>Microservices</li>
+                            </ul>
+                            <div class="project-bottom">
+                                <div class="card-metric">40% more engagement and 30% faster transactions</div>
+                                <a class="button button-secondary button-compact" href="../ecommerce-platform/">Read case study</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <a class="project-thumb" href="../steel-analysis-platform/" aria-label="Open case study for the steel analysis modernization platform">
+                            <img src="../../assets/images/portfolio/p2.jpg" alt="Preview image representing an enterprise workflow application" loading="lazy" decoding="async">
+                        </a>
+                        <div class="project-copy">
+                            <div class="project-top">
+                                <span class="project-index">02</span>
+                                <div class="card-topline">
+                                    <span>Enterprise Application</span>
+                                    <span>Internal Tools</span>
+                                </div>
+                            </div>
+                            <h3>Steel Analysis Modernization Platform</h3>
+                            <p class="project-summary">Replaced spreadsheet-heavy steel analysis workflows with an Angular and ASP.NET Core platform that reduced manual effort, improved responsiveness, and made adoption easier.</p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>Angular</li>
+                                <li>ASP.NET Core</li>
+                                <li>SQL Server</li>
+                                <li>Stakeholder Demos</li>
+                            </ul>
+                            <div class="project-bottom">
+                                <div class="card-metric">40% less manual work and 35% faster responses</div>
+                                <a class="button button-secondary button-compact" href="../steel-analysis-platform/">Read case study</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-row reveal">
+                        <a class="project-thumb" href="../ai-recommender-system/" aria-label="Open case study for the LLM-based AI recommender system">
+                            <img src="../../assets/images/portfolio/p3.jpg" alt="Preview image representing an AI-powered recommendation system" loading="lazy" decoding="async">
+                        </a>
+                        <div class="project-copy">
+                            <div class="project-top">
+                                <span class="project-index">03</span>
+                                <div class="card-topline">
+                                    <span>Applied AI</span>
+                                    <span>OpenAI API</span>
+                                </div>
+                            </div>
+                            <h3>LLM-Based AI Recommender System</h3>
+                            <p class="project-summary">Built an LLM-powered recommender in Python with OpenAI API and PostgreSQL, improving engagement, recommendation quality, and query performance.</p>
+                            <ul class="work-stack" aria-label="Technologies used">
+                                <li>Python</li>
+                                <li>OpenAI API</li>
+                                <li>PostgreSQL</li>
+                                <li>Evaluation</li>
+                            </ul>
+                            <div class="project-bottom">
+                                <div class="card-metric">35% stronger engagement and 30% faster queries</div>
+                                <a class="button button-secondary button-compact" href="../ai-recommender-system/">Read case study</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Nouman Ahmed</p>
+            <p>Software engineer and PhD researcher focused on product systems, practical AI, and dependable delivery.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/custom.js"></script>
+</body>
+</html>
