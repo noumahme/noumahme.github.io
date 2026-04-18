@@ -5,7 +5,7 @@ layout: default
     <div class="container">
         <div class="page-hero-grid reveal">
             <div class="page-hero-copy">
-                <a class="page-breadcrumb" href="{{ '/' | relative_url }}#work">Back to selected projects</a>
+                <a class="page-breadcrumb" href="{{ '/' | relative_url }}#work">Back to portfolio</a>
                 <p class="eyebrow">{{ page.eyebrow }}</p>
                 <h1>{{ page.title }}</h1>
                 <p class="page-summary">{{ page.summary }}</p>
@@ -19,7 +19,7 @@ layout: default
                 {% endif %}
 
                 <div class="hero-actions">
-                    <a class="button button-primary" href="{{ '/' | relative_url }}#work">Back to projects</a>
+                    <a class="button button-primary" href="{{ '/' | relative_url }}#work">View all projects</a>
                     <a class="button button-secondary" href="{{ '/' | relative_url }}#contact">Discuss similar work</a>
                 </div>
             </div>
@@ -63,20 +63,20 @@ layout: default
     <div class="container">
         <div class="detail-content-grid">
             <article class="detail-card reveal">
-                <p class="eyebrow">Challenge</p>
-                <h2>What needed to change</h2>
+                <p class="eyebrow">Problem</p>
+                <h2>What needed to improve</h2>
                 <p>{{ page.challenge }}</p>
             </article>
 
             <article class="detail-card reveal">
-                <p class="eyebrow">Build</p>
-                <h2>How I approached it</h2>
+                <p class="eyebrow">Approach</p>
+                <h2>How I built it</h2>
                 <p>{{ page.build }}</p>
             </article>
 
             <article class="detail-card reveal">
                 <p class="eyebrow">Outcome</p>
-                <h2>What improved</h2>
+                <h2>What changed</h2>
                 <p>{{ page.outcome }}</p>
             </article>
         </div>
@@ -110,31 +110,34 @@ layout: default
     <div class="container">
         <div class="section-head reveal">
             <p class="eyebrow">More Projects</p>
-            <h2>Other case studies from the same portfolio.</h2>
-            <p>These pages follow the same layout so the project detail view stays consistent with the main site.</p>
+            <h2>Other case studies from the portfolio.</h2>
+            <p>These project pages follow the same visual system as the homepage, so the detail view stays consistent.</p>
         </div>
 
-        <div class="card-grid related-grid">
+        <div class="project-list project-list-compact">
             {% for project in project_pages %}
             {% unless project.url == page.url %}
-            <article class="work-card reveal">
-                <a class="work-media" href="{{ project.url | relative_url }}" aria-label="Open case study for {{ project.title }}">
+            <article class="project-row reveal">
+                <a class="project-thumb" href="{{ project.url | relative_url }}" aria-label="Open case study for {{ project.title }}">
                     <img src="{{ project.hero_image | relative_url }}" alt="{{ project.hero_alt }}" loading="lazy" decoding="async">
                 </a>
-                <div class="work-body">
-                    <div class="card-topline">
+                <div class="project-copy">
+                    <div class="project-top">
+                        <span class="project-index">0{{ forloop.index }}</span>
+                        <div class="card-topline">
                         {% for tag in project.project_tags limit: 2 %}
-                        <span>{{ tag }}</span>
+                            <span>{{ tag }}</span>
                         {% endfor %}
+                        </div>
                     </div>
                     <h3>{{ project.title }}</h3>
-                    <p>{{ project.summary }}</p>
+                    <p class="project-summary">{{ project.summary }}</p>
                     <ul class="work-stack" aria-label="Technologies used">
                         {% for item in project.stack limit: 4 %}
                         <li>{{ item }}</li>
                         {% endfor %}
                     </ul>
-                    <div class="work-footer">
+                    <div class="project-bottom">
                         <div class="card-metric">{{ project.metrics[0].value }} {{ project.metrics[0].label }}</div>
                         <a class="button button-secondary button-compact" href="{{ project.url | relative_url }}">Read case study</a>
                     </div>

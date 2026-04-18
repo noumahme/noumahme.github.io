@@ -1,27 +1,20 @@
 @media screen and (max-width: 1180px) {
     .hero-grid,
     .page-hero-grid,
+    .work-layout,
     .split-grid,
-    .contact-shell,
-    .work-feature-card {
+    .contact-shell {
         grid-template-columns: 1fr;
-    }
-
-    .timeline {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hero-side,
     .page-hero-side {
-        max-width: 34rem;
+        max-width: 36rem;
     }
 
-    .work-intro {
-        grid-template-columns: 1fr;
-    }
-
-    .work-note {
-        max-width: 24rem;
+    .work-sidebar {
+        position: static;
+        max-width: 36rem;
     }
 }
 
@@ -33,14 +26,23 @@
     .overview-grid,
     .metrics-grid,
     .detail-metrics-grid,
-    .card-grid,
-    .timeline,
     .skills-grid,
     .detail-content-grid,
-    .detail-split-grid,
-    .work-support-grid,
-    .feature-highlights {
+    .detail-split-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .project-row,
+    .project-row-feature,
+    .project-list-compact .project-row,
+    .timeline-card {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-card > *:not(.timeline-date),
+    .timeline-date {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
@@ -58,9 +60,9 @@
         gap: 0.2rem;
         padding: 0.8rem;
         border: 1px solid var(--line);
-        border-radius: 1.25rem;
-        background: rgba(255, 255, 255, 0.96);
-        box-shadow: 0 20px 40px rgba(26, 39, 32, 0.12);
+        border-radius: 1.2rem;
+        background: rgba(255, 253, 249, 0.97);
+        box-shadow: 0 20px 42px rgba(28, 36, 31, 0.12);
         opacity: 0;
         visibility: hidden;
         transform: translateY(-8px);
@@ -96,29 +98,27 @@
     }
 
     .header-inner {
-        min-height: 4.5rem;
+        min-height: 4.45rem;
     }
 
     .section-pad {
-        padding: 4rem 0;
+        padding: 4.1rem 0;
     }
 
     .overview-grid,
     .metrics-grid,
     .detail-metrics-grid,
-    .card-grid,
-    .timeline,
     .skills-grid,
     .detail-content-grid,
     .detail-split-grid,
-    .work-support-grid,
-    .feature-highlights {
+    .card-grid,
+    .split-grid {
         grid-template-columns: 1fr;
     }
 
     .hero-copy h1,
     .page-hero-copy h1 {
-        font-size: clamp(2.4rem, 12vw, 4rem);
+        font-size: clamp(2.35rem, 11vw, 4rem);
     }
 
     .hero-summary,
@@ -127,26 +127,21 @@
     }
 
     .portrait-card {
-        min-height: 21rem;
+        min-height: 22rem;
     }
 
     .page-hero-media {
         min-height: 18rem;
     }
 
-    .work-feature-media {
-        min-height: 18rem;
+    .project-thumb {
+        max-width: 34rem;
     }
 
     .hero-actions,
     .contact-actions,
-    .work-footer {
+    .project-bottom {
         align-items: stretch;
-    }
-
-    .button,
-    .button-compact {
-        width: 100%;
     }
 }
 
@@ -155,20 +150,19 @@
         font-size: 0.92rem;
     }
 
-    .info-panel,
     .metric-card,
-    .work-body,
-    .timeline-card,
     .skill-group,
     .info-card,
     .detail-card,
     .contact-shell,
-    .work-feature-card,
-    .work-note {
+    .work-sidebar-note {
         padding: 1.2rem;
     }
 
-    .hero-list,
+    .timeline-card {
+        padding: 1.2rem 0;
+    }
+
     .page-tags,
     .work-stack,
     .chip-list {
@@ -179,6 +173,11 @@
         width: 100%;
         justify-content: center;
         text-align: center;
+    }
+
+    .button,
+    .button-compact {
+        width: 100%;
     }
 
     .footer-inner {
