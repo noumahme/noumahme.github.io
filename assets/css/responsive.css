@@ -126,18 +126,6 @@
         font-size: 1rem;
     }
 
-    .portrait-card {
-        min-height: 22rem;
-    }
-
-    .page-hero-media {
-        min-height: 18rem;
-    }
-
-    .project-thumb {
-        max-width: 34rem;
-    }
-
     .hero-actions,
     .contact-actions,
     .project-bottom {
@@ -154,8 +142,7 @@
     .skill-group,
     .info-card,
     .detail-card,
-    .contact-shell,
-    .work-sidebar-note {
+    .contact-shell {
         padding: 1.2rem;
     }
 
