@@ -403,37 +403,6 @@ ul {
     color: var(--ink-soft);
 }
 
-.portrait-card,
-.page-hero-media {
-    overflow: hidden;
-    border-radius: var(--radius-xl);
-    background: var(--surface);
-    border: 1px solid rgba(31, 41, 36, 0.08);
-    box-shadow: var(--shadow-md);
-}
-
-.portrait-card img,
-.page-hero-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.45s ease;
-}
-
-.portrait-card:hover img,
-.page-hero-media:hover img,
-.project-row:hover .project-thumb img {
-    transform: scale(1.03);
-}
-
-.portrait-card {
-    min-height: 28rem;
-}
-
-.page-hero-media {
-    min-height: 22rem;
-}
-
 .summary-card {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -632,14 +601,6 @@ ul {
     gap: 1.2rem;
 }
 
-.work-sidebar-note {
-    padding: 1.2rem 1.25rem;
-    border: 1px solid rgba(63, 111, 101, 0.14);
-    border-radius: var(--radius-lg);
-    background: linear-gradient(180deg, rgba(63, 111, 101, 0.06), rgba(63, 111, 101, 0.02));
-    color: var(--ink-soft);
-}
-
 .project-list {
     display: grid;
     border-top: 1px solid var(--line-strong);
@@ -647,7 +608,7 @@ ul {
 
 .project-row {
     display: grid;
-    grid-template-columns: 15rem minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
     padding: 1.65rem 0;
     border-bottom: 1px solid var(--line);
@@ -656,27 +617,6 @@ ul {
 
 .project-row:hover {
     transform: translateY(-2px);
-}
-
-.project-row-feature {
-    grid-template-columns: 18rem minmax(0, 1fr);
-}
-
-.project-thumb {
-    display: block;
-    overflow: hidden;
-    border: 1px solid rgba(31, 41, 36, 0.1);
-    border-radius: var(--radius-lg);
-    background: var(--surface-tint);
-    box-shadow: var(--shadow-sm);
-    aspect-ratio: 4 / 3;
-}
-
-.project-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.35s ease;
 }
 
 .project-copy {
@@ -721,10 +661,6 @@ ul {
     justify-content: space-between;
     gap: 0.9rem;
     margin-top: auto;
-}
-
-.project-list-compact .project-row {
-    grid-template-columns: 13rem minmax(0, 1fr);
 }
 
 .card-topline {
@@ -1057,9 +993,6 @@ ul {
 
     .button,
     .project-row,
-    .project-thumb img,
-    .portrait-card img,
-    .page-hero-media img,
     .skill-group,
     .info-card,
     .detail-card,
