@@ -184,3 +184,20 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-list li {
+        grid-template-columns: 1fr;
+        row-gap: 0.4rem;
+    }
+
+    .pub-list li > p,
+    .pub-status {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
